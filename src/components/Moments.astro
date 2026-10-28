@@ -1,0 +1,31 @@
+---
+import { copy } from "../data/site";
+---
+
+<section
+  class="container section moments reveal"
+  id="momentos"
+  aria-labelledby="moments-title"
+>
+  <p class="eyebrow">{copy.ui.seccion03SiempreHayUnMotivo}</p>
+  <h2 id="moments-title">
+    {copy.ui.elMomentoLoPonesTu}
+    <br />
+    <em>{copy.ui.laCopaLaEncontramosJuntos}</em>
+  </h2>
+  <div class="moments-grid">
+    {copy.moments.map((m, i) => (
+      <a href="#catalogo" data-filter-link={m.category}>
+        <span class="moment-number">0{i + 1}</span>
+        <h3>{m.title}</h3>
+        <p>{m.text}</p>
+        <span class="text-link">
+          {m.cta}
+          <span class="arrow" aria-hidden="true">
+            ↗
+          </span>
+        </span>
+      </a>
+    ))}
+  </div>
+</section>

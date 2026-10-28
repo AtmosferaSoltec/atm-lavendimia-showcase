@@ -1,0 +1,44 @@
+---
+import Photo from "./Photo.astro";
+import { editorial } from "../lib/images";
+import { categories, copy } from "../data/site";
+const keys = ["vinos", "piscos", "cremas", "macerados"] as const;
+---
+
+<section
+  id="coleccion"
+  class="container section reveal"
+  aria-labelledby="collection-title"
+>
+  <p class="eyebrow">{copy.ui.seccion01NuestraColeccion}</p>
+  <div class="section-heading">
+    <h2 id="collection-title">
+      {copy.ui.comoTeGusta}
+      <em>{copy.ui.brindar}</em>
+    </h2>
+    <p>
+      {copy.ui.deLosClasicosDeSiempre}
+      <br />
+      {copy.ui.aTuProximoGranDescubrimiento}
+    </p>
+  </div>
+  <div class="collection-grid">
+    {keys.map((key, i) => (
+      <a class="collection-card" href="#catalogo" data-filter-link={key}>
+        <div class="collection-image">
+          <Photo
+            src={editorial[categories[key].image]}
+            alt={`Ambientación referencial de ${categories[key].label.toLowerCase()}`}
+          />
+          <span class="image-number">0{i + 1}</span>
+          <span class="round-arrow" aria-hidden="true">
+            ↗
+          </span>
+        </div>
+        <h3>{categories[key].short}</h3>
+        <p>{categories[key].phrase}</p>
+      </a>
+    ))}
+  </div>
+  <p class="image-note">{copy.ui.fotografiasDeAmbientacionLasImagenesSon}</p>
+</section>

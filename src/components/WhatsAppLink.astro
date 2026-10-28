@@ -1,0 +1,21 @@
+---
+import { site, whatsappUrl } from "../data/site";
+const {
+  message = site.generalMessage,
+  class: className = "button",
+  ...props
+} = Astro.props;
+---
+
+<a
+  href={whatsappUrl(message)}
+  target="_blank"
+  rel="noopener noreferrer"
+  class={className}
+  {...props}
+>
+  <slot />
+  <span aria-hidden="true" class="arrow">
+    ↗
+  </span>
+</a>

@@ -1,0 +1,34 @@
+---
+import Brand from "./Brand.astro";
+import WhatsAppLink from "./WhatsAppLink.astro";
+import { site, copy } from "../data/site";
+---
+
+<div class="announcement">
+  <div class="container">
+    <span>{copy.announcement}</span>
+    <span>{site.shipping} ↗</span>
+  </div>
+</div>
+<header>
+  <div class="container header-inner">
+    <Brand />
+    <button
+      class="menu-toggle js-only"
+      aria-expanded="false"
+      aria-controls="navigation"
+      aria-label={copy.ui.abrirMenu}
+    >
+      ☰
+    </button>
+    <nav id="navigation" aria-label={copy.ui.navegacionPrincipal}>
+      <a href="#coleccion">{copy.ui.laColeccion}</a>
+      <a href="#esencia">{copy.ui.nuestraEsencia}</a>
+      <a href="#momentos">{copy.ui.paraCadaMomento}</a>
+      <WhatsAppLink class="button outline">{copy.ui.escribenos}</WhatsAppLink>
+    </nav>
+  </div>
+</header>
+<script>
+  import "../scripts/menu";
+</script>

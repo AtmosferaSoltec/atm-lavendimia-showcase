@@ -1,0 +1,11 @@
+---
+import { copy } from "../data/site";
+import WhatsAppLink from "./WhatsAppLink.astro";
+---
+
+<div class="whatsapp-fab" hidden>
+  <WhatsAppLink>{copy.ui.escribenosPorWhatsapp}</WhatsAppLink>
+</div>
+<script>
+  import "../scripts/reveal";
+</script>

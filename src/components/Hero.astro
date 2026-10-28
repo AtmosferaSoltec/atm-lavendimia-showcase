@@ -1,0 +1,51 @@
+---
+import Photo from "./Photo.astro";
+import { editorial } from "../lib/images";
+import { copy, site } from "../data/site";
+const symbols = import.meta.glob<{ default: { src: string } }>("../assets/brand/*.svg", { eager: true });
+const symbol = symbols[site.logoSymbol].default;
+---
+
+<section class="hero container" id="inicio" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="eyebrow">{copy.hero.eyebrow}</p>
+    <h1 id="hero-title">
+      {copy.hero.title} <em>{copy.hero.italic}</em>
+    </h1>
+    <p class="hero-description">{copy.hero.description}</p>
+    <a class="button" href="#coleccion">
+      {copy.hero.cta}
+      <span class="arrow" aria-hidden="true">
+        ↗
+      </span>
+    </a>
+    <p class="hero-note">
+      {copy.ui.vinosPiscosCremasYMacerados}
+      <br />
+      {copy.hero.note}
+    </p>
+  </div>
+  <figure class="hero-image">
+    <Photo
+      src={editorial.hero}
+      kind="hero"
+      alt={copy.ui.botellaDeVinoJuntoAUna}
+    />
+    <figcaption>{copy.hero.caption}</figcaption>
+    <span class="seal" aria-hidden="true">
+      {copy.ui.desdeIca}
+      <img class="seal-symbol" src={symbol.src} width="360" height="512" alt="" />
+      {copy.ui.conGusto}
+    </span>
+  </figure>
+  <a class="scroll-hint eyebrow" href="#coleccion">
+    {copy.ui.nbspExploraATuGusto}
+  </a>
+</section>
+<div class="marquee" aria-hidden="true">
+  <div>
+    {[0, 1, 2, 3].map(() => (
+      <span>{copy.ui.vinosPiscosCremasMaceradosDesdeIca}</span>
+    ))}
+  </div>
+</div>

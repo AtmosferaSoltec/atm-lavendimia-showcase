@@ -1,0 +1,13 @@
+:root {
+  --cream: #f8f5ed;
+  --paper: #eeeadf;
+  --studio: #f3eee5;
+  --wine: #54242e;
+  --wine-dark: #321b24;
+  --ink: #342d2b;
+  --muted: #75685d;
+  --copper: #9c5a45;
+  --rule: #ddd6c9;
+  --whatsapp: #1fa855;
+  --gutter: clamp(20px, 5vw, 64px);
+}

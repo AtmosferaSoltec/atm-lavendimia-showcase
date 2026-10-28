@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 120" role="img" aria-label="Logo de ejemplo">
+  <rect width="260" height="120" fill="none"/>
+  <g fill="none" stroke="#54242e" stroke-width="2">
+    <circle cx="48" cy="60" r="30"/>
+    <path d="M48 36c10 6 14 14 12 24-8 0-16-6-18-14 0-4 2-8 6-10z" fill="#54242e" stroke="none"/>
+  </g>
+  <text x="92" y="58" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#54242e" letter-spacing="1">LOGO</text>
+  <text x="92" y="84" font-family="Georgia, 'Times New Roman', serif" font-size="14" fill="#9c5a45" letter-spacing="4">PLACEHOLDER</text>
+</svg>

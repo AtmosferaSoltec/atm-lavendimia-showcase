@@ -1,0 +1,14 @@
+---
+import { site } from "../data/site";
+interface Props { variant?: "header" | "footer" }
+const { variant = "header" } = Astro.props;
+const logos = import.meta.glob<{ default: { src: string } }>(
+  "../assets/brand/*.svg", { eager: true },
+);
+const logo = logos[variant === "footer" ? site.logo : site.logoHeader]?.default;
+if (!logo) throw new Error("No se encuentra el logo configurado en site.ts");
+---
+
+<a class:list={["brand", `brand--${variant}`]} href="#inicio">
+  <img src={logo.src} width="512" height={variant === "footer" ? 295 : 110} alt={site.name} />
+</a>

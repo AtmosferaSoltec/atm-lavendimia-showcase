@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-28",
+  "astro": "7.4.3",
+  "lighthouse": "13.6.0",
+  "profile": "Mobile default, simulated 4G",
+  "indexable": false,
+  "scores": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 69
+  },
+  "indexableBuildScores": {
+    "performance": 100,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "lcpMs": 756.2227,
+  "cls": 0,
+  "totalObservedTransferBytes": 309392,
+  "javascriptGzipBytes": 2523,
+  "physicalMobileDevicesTested": false
+}

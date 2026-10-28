@@ -1,0 +1,71 @@
+---
+import Photo from "./Photo.astro";
+import { editorial } from "../lib/images";
+import {
+  categories,
+  site,
+  productTitle,
+  capacityValue,
+  whatsappUrl,
+  productMessage,
+  copy,
+} from "../data/site";
+const { product } = Astro.props;
+const p = product.data;
+const variants = [...p.variants].sort(
+  (a, b) => capacityValue(a.capacity) - capacityValue(b.capacity),
+);
+const src = p.image ?? editorial[categories[p.category].image];
+const reference = !p.image
+  ? "Imagen referencial de la categoría"
+  : p.imageIsReference
+    ? "Recreación de estudio del producto"
+    : "";
+---
+
+<article
+  class="product-card reveal"
+  data-product
+  data-category={p.category}
+  data-name={p.name}
+  data-variants={JSON.stringify(variants.map(({ price, ...variant }) => site.showPrices ? { ...variant, price } : variant))}
+  data-phrase={categories[p.category].phrase}
+>
+  <a
+    class="product-open"
+    href={whatsappUrl(productMessage(p.name, variants[0]))}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={`${categories[p.category].label}. ${reference}. ${productTitle(p.name)}. ${[...new Set(variants.map((v) => v.capacity ?? "Por confirmar"))].slice(0, 3).join(" / ")}. Descubrir. Consultar ${p.name} por WhatsApp`}
+  >
+    <div class:list={["product-image", { studio: !!p.image }]}>
+      <Photo
+        src={src}
+        kind="product"
+        alt={reference ? `${p.name}: ${reference.toLowerCase()}` : p.name}
+      />
+      <span class="category-badge">{categories[p.category].label}</span>
+      {reference && <span class="reference-badge">{reference}</span>}
+      <span class="product-plus" aria-hidden="true">
+        +
+      </span>
+    </div>
+    <h3>{productTitle(p.name)}</h3>
+    <div class="product-bottom">
+      <span>
+        {[...new Set(variants.map((v) => v.capacity ?? "Por confirmar"))]
+          .slice(0, 3)
+          .join(" / ")}
+      </span>
+      <span>{copy.ui.descubrir}</span>
+    </div>
+  </a>
+  <template class="dialog-photo">
+    <Photo
+      src={src}
+      kind="dialog"
+      alt={reference ? `${p.name}: ${reference.toLowerCase()}` : p.name}
+    />
+    {reference && <p class="image-note">{reference}</p>}
+  </template>
+</article>

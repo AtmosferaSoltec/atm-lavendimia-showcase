@@ -1,0 +1,40 @@
+---
+import { site, whatsappUrl, copy } from "../data/site";
+---
+
+<dialog id="product-dialog" aria-labelledby="dialog-title">
+  <button class="dialog-close" aria-label={copy.ui.cerrarDetalleDelProducto}>
+    ×
+  </button>
+  <div class="dialog-grid">
+    <div id="dialog-image"></div>
+    <div class="dialog-content">
+      <p id="dialog-category" class="eyebrow"></p>
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-phrase"></p>
+      <label for="presentation">{copy.ui.eligeTuPresentacion}</label>
+      <select id="presentation" aria-describedby="presentation-help"></select>
+      <dl class="presentation-details" aria-live="polite" aria-atomic="true">
+        <div><dt>{copy.ui.presentationLabel}</dt><dd id="selected-presentation"></dd></div>
+        <div><dt>{copy.ui.capacityLabel}</dt><dd id="selected-capacity"></dd></div>
+        <div><dt>{copy.ui.quantityLabel}</dt><dd id="selected-quantity"></dd></div>
+      </dl>
+      <p id="dialog-price" aria-live="polite" hidden></p>
+      <p id="dialog-note">{copy.ui.consultaElPrecioYLaDisponibilidad}</p>
+      <a
+        id="dialog-whatsapp"
+        class="button"
+        href={whatsappUrl(site.generalMessage)}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {copy.ui.consultarEsteProducto}
+        <span class="arrow" aria-hidden="true">
+          ↗
+        </span>
+      </a>
+      <p id="presentation-help" class="presentation-help">{copy.ui.quantityHelp}</p>
+      <p class="shipping">{site.shipping}</p>
+    </div>
+  </div>
+</dialog>

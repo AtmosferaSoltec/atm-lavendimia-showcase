@@ -1,0 +1,25 @@
+---
+import WhatsAppLink from "./WhatsAppLink.astro";
+import { site, copy } from "../data/site";
+---
+
+<section
+  id="contacto"
+  class="contact section reveal"
+  aria-labelledby="contact-title"
+>
+  <div class="container">
+    <p class="eyebrow">{copy.ui.lasBuenasConversacionesEmpiezanConUn}</p>
+    <h2 id="contact-title">
+      {copy.ui.brindamosPor}
+      <em>{copy.ui.algoBueno}</em>
+    </h2>
+    <p>{copy.ui.cuentanosQueTeGustaTeAyudamos}</p>
+    <WhatsAppLink>{copy.ui.hablemosPorWhatsapp}</WhatsAppLink>
+    <ul class="checks">
+      <li>{copy.ui.atencionDirecta}</li>
+      <li>{site.shipping}</li>
+      <li>{copy.ui.diferentesPresentaciones}</li>
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,46 @@
+---
+import Brand from "./Brand.astro";
+import WhatsAppLink from "./WhatsAppLink.astro";
+import { site, copy } from "../data/site";
+---
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <Brand variant="footer" />
+        <p>
+          {site.tagline}.<br />
+          {copy.ui.desdeIcaPeru}
+        </p>
+      </div>
+      <nav aria-label={copy.ui.navegacionDelPie}>
+        <h2 class="eyebrow">{copy.ui.explora}</h2>
+        <a href="#coleccion">{copy.ui.laColeccion}</a>
+        <a href="#esencia">{copy.ui.nuestraEsencia}</a>
+        <a href="#momentos">{copy.ui.paraCadaMomento}</a>
+      </nav>
+      <div>
+        <h2 class="eyebrow">{copy.ui.conversemos}</h2>
+        <WhatsAppLink class="text-link">{site.phoneDisplay}</WhatsAppLink>
+        <address>
+          {site.address.map((line) => (
+            <span>
+              {line}
+              <br />
+            </span>
+          ))}
+        </address>
+      </div>
+      <a href="#inicio" class="back-top" aria-label={copy.ui.volverAlInicio}>
+        ↑
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        © {new Date().getFullYear()} {site.name}. Hecho para compartir.
+      </p>
+      <p>{site.ageNotice}</p>
+    </div>
+  </div>
+</footer>

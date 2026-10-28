@@ -1,0 +1,33 @@
+---
+import Seo from "../components/Seo.astro";
+import "../styles/tokens.css";
+import "../styles/base.css";
+---
+
+<!doctype html>
+<html lang="es-PE">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#54242e" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link
+      rel="preload"
+      href="/fonts/cormorant-garamond-latin-variable-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <Seo />
+  </head>
+  <body>
+    <a class="skip" href="#coleccion">
+      Saltar al contenido
+    </a>
+    <slot />
+  </body>
+</html>

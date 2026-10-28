@@ -1,0 +1,34 @@
+---
+import Photo from "./Photo.astro";
+import WhatsAppLink from "./WhatsAppLink.astro";
+import { editorial } from "../lib/images";
+import { site, copy } from "../data/site";
+---
+
+<section id="esencia" class="essence reveal" aria-labelledby="essence-title">
+  <div class="essence-image">
+    <Photo
+      src={editorial.hero}
+      alt={copy.ui.vinoUvasYUnaCopaListos}
+      sizes="(min-width:768px) 50vw, 100vw"
+    />
+  </div>
+  <div class="essence-copy">
+    <p class="eyebrow">{copy.ui.seccion02NuestraEsencia}</p>
+    <h2 id="essence-title">
+      {copy.ui.masQueUnaCopa}
+      <br />
+      <em>{copy.ui.loQueCompartimos}</em>
+    </h2>
+    {copy.essence.map((p) => (
+      <p>{p}</p>
+    ))}
+    <WhatsAppLink class="text-link">
+      {copy.ui.nosEncantaraConocerte}
+    </WhatsAppLink>
+    <p class="signature">
+      {site.name}
+      <span>{site.tagline}.</span>
+    </p>
+  </div>
+</section>

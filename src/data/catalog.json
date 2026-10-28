@@ -1,0 +1,1077 @@
+{
+  "source": {
+    "presentationCount": 173,
+    "productCount": 52,
+    "publicCategoryCount": 5,
+    "originalCategoryCount": 6,
+    "note": "Catálogo estático de La Vendimia. La categoría comercial Unidad se integra en la familia de cada producto. Los nombres equivalentes se agrupan y todas las presentaciones originales se conservan. Crema de Higo se incorpora desde la fotografía del cliente; su presentación está pendiente de confirmar y no forma parte de las 173 presentaciones originales."
+  },
+  "products": [
+    {
+      "id": "vino-borgona-especial",
+      "name": "Vino Borgoña Especial",
+      "category": "especiales",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        }
+      ],
+      "image": "borgona-especial.webp",
+      "imageIsReference": true
+    },
+    {
+      "id": "crema-de-higo",
+      "name": "Crema de Higo",
+      "category": "cremas",
+      "variants": [
+        {
+          "capacity": null,
+          "presentation": "Por confirmar"
+        }
+      ],
+      "image": "crema-higo.webp",
+      "imageIsReference": true
+    },
+    {
+      "id": "vino-sangria",
+      "name": "Vino Sangría",
+      "category": "vinos",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ],
+      "image": "sangria.webp",
+      "imageIsReference": true
+    },
+    {
+      "id": "vino-borgona",
+      "name": "Vino Borgoña",
+      "category": "vinos",
+      "variants": [
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Unidad"
+        },
+        {
+          "capacity": "5 Lt",
+          "presentation": "Caja x2"
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Caja x4"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        },
+        {
+          "capacity": "20 Lt",
+          "presentation": "Bidón"
+        }
+      ]
+    },
+    {
+      "id": "vino-rose",
+      "name": "Vino Rosé",
+      "category": "vinos",
+      "variants": [
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Unidad"
+        },
+        {
+          "capacity": "5 Lt",
+          "presentation": "Caja x2"
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Caja x4"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        },
+        {
+          "capacity": "20 Lt",
+          "presentation": "Bidón"
+        }
+      ]
+    },
+    {
+      "id": "pisco-acholado",
+      "name": "Pisco Acholado",
+      "category": "piscos",
+      "variants": [
+        {
+          "capacity": "500 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "500 ml",
+          "presentation": "Unidad"
+        }
+      ]
+    },
+    {
+      "id": "crema-de-lucuma",
+      "name": "Crema de Lúcuma",
+      "category": "cremas",
+      "variants": [
+        {
+          "capacity": "500 ml",
+          "presentation": "Caja x12"
+        }
+      ]
+    },
+    {
+      "id": "vino-perfecto-amor",
+      "name": "Vino Perfecto Amor",
+      "category": "vinos",
+      "variants": [
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Unidad"
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Caja x4"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "macerado-de-maracuya",
+      "name": "Macerado de Maracuyá",
+      "category": "macerados",
+      "variants": [
+        {
+          "capacity": "375 ml",
+          "presentation": "Caja x24"
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "1,5 Lt",
+          "presentation": "Caja x5"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "vino-borgona-blanca",
+      "name": "Vino Borgoña Blanca",
+      "category": "vinos",
+      "variants": [
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Unidad"
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Caja x4"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "pisco-quebranta",
+      "name": "Pisco Quebranta",
+      "category": "piscos",
+      "variants": [
+        {
+          "capacity": "500 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "500 ml",
+          "presentation": "Unidad"
+        }
+      ]
+    },
+    {
+      "id": "vino",
+      "name": "Vino",
+      "category": "vinos",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Unidad"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Unidad"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Unidad"
+        }
+      ]
+    },
+    {
+      "id": "vino-7-amores",
+      "name": "Vino 7 Amores",
+      "category": "vinos",
+      "variants": [
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Unidad"
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Caja x4"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "vino-durazno",
+      "name": "Vino Durazno",
+      "category": "vinos",
+      "variants": [
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Unidad"
+        },
+        {
+          "capacity": "5 Lt",
+          "presentation": "Caja x2"
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Caja x4"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "vino-higo",
+      "name": "Vino Higo",
+      "category": "vinos",
+      "variants": [
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Unidad"
+        },
+        {
+          "capacity": "5 Lt",
+          "presentation": "Caja x2"
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Caja x4"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        },
+        {
+          "capacity": "20 Lt",
+          "presentation": "Bidón"
+        }
+      ]
+    },
+    {
+      "id": "vino-lagrima-de-mujer",
+      "name": "Vino Lágrima de Mujer",
+      "category": "vinos",
+      "variants": [
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Unidad"
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Caja x4"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "vino-maracuya",
+      "name": "Vino Maracuyá",
+      "category": "vinos",
+      "variants": [
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Unidad"
+        },
+        {
+          "capacity": "5 Lt",
+          "presentation": "Caja x2"
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Caja x4"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        },
+        {
+          "capacity": "20 Lt",
+          "presentation": "Bidón"
+        }
+      ]
+    },
+    {
+      "id": "vino-mistela",
+      "name": "Vino Mistela",
+      "category": "vinos",
+      "variants": [
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Unidad"
+        },
+        {
+          "capacity": "5 Lt",
+          "presentation": "Caja x2"
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Caja x4"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        },
+        {
+          "capacity": "20 Lt",
+          "presentation": "Bidón"
+        }
+      ]
+    },
+    {
+      "id": "vino-moscato",
+      "name": "Vino Moscato",
+      "category": "vinos",
+      "variants": [
+        {
+          "capacity": "Galón 4 Lt",
+          "presentation": "Unidad"
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        }
+      ]
+    },
+    {
+      "id": "vino-pina",
+      "name": "Vino Piña",
+      "category": "vinos",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "vino-puro-amor",
+      "name": "Vino Puro Amor",
+      "category": "vinos",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "vino-sangre-toro",
+      "name": "Vino Sangre Toro",
+      "category": "vinos",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "vino-cachina-blanca",
+      "name": "Vino Cachina Blanca",
+      "category": "especiales",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        }
+      ]
+    },
+    {
+      "id": "vino-cachina-negra",
+      "name": "Vino Cachina Negra",
+      "category": "especiales",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        }
+      ]
+    },
+    {
+      "id": "vino-cachina-quebranta",
+      "name": "Vino Cachina Quebranta",
+      "category": "especiales",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        }
+      ]
+    },
+    {
+      "id": "vino-especial",
+      "name": "Vino Especial",
+      "category": "especiales",
+      "variants": [
+        {
+          "capacity": null,
+          "presentation": "Unidad"
+        }
+      ]
+    },
+    {
+      "id": "vino-higo-especial",
+      "name": "Vino Higo Especial",
+      "category": "especiales",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        }
+      ]
+    },
+    {
+      "id": "vino-italia-dorada",
+      "name": "Vino Italia Dorada",
+      "category": "especiales",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        }
+      ]
+    },
+    {
+      "id": "vino-sangria-especial",
+      "name": "Vino Sangría Especial",
+      "category": "especiales",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        }
+      ]
+    },
+    {
+      "id": "pisco-destilado",
+      "name": "Pisco Destilado",
+      "category": "piscos",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        },
+        {
+          "capacity": "20 Lt",
+          "presentation": "Bidón"
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Unidad"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Unidad"
+        }
+      ]
+    },
+    {
+      "id": "pisco-italia",
+      "name": "Pisco Italia",
+      "category": "piscos",
+      "variants": [
+        {
+          "capacity": "500 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "500 ml",
+          "presentation": "Unidad"
+        }
+      ]
+    },
+    {
+      "id": "pisco-mosto-verde",
+      "name": "Pisco Mosto Verde",
+      "category": "piscos",
+      "variants": [
+        {
+          "capacity": "500 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "500 ml",
+          "presentation": "Unidad"
+        }
+      ]
+    },
+    {
+      "id": "crema-de-algarrobina",
+      "name": "Crema de Algarrobina",
+      "category": "cremas",
+      "variants": [
+        {
+          "capacity": "500 ml",
+          "presentation": "Caja x12"
+        }
+      ]
+    },
+    {
+      "id": "crema-de-cafe",
+      "name": "Crema de Café",
+      "category": "cremas",
+      "variants": [
+        {
+          "capacity": "500 ml",
+          "presentation": "Caja x12"
+        }
+      ]
+    },
+    {
+      "id": "crema-de-coco",
+      "name": "Crema de Coco",
+      "category": "cremas",
+      "variants": [
+        {
+          "capacity": "500 ml",
+          "presentation": "Caja x12"
+        }
+      ]
+    },
+    {
+      "id": "crema-de-fresa",
+      "name": "Crema de Fresa",
+      "category": "cremas",
+      "variants": [
+        {
+          "capacity": "500 ml",
+          "presentation": "Caja x12"
+        }
+      ]
+    },
+    {
+      "id": "crema-de-maracuya",
+      "name": "Crema de Maracuyá",
+      "category": "cremas",
+      "variants": [
+        {
+          "capacity": "500 ml",
+          "presentation": "Caja x12"
+        }
+      ]
+    },
+    {
+      "id": "macerado",
+      "name": "Macerado",
+      "category": "macerados",
+      "variants": [
+        {
+          "capacity": "375 ml",
+          "presentation": "Unidad"
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Unidad"
+        },
+        {
+          "capacity": "1,5 Lt",
+          "presentation": "Unidad"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Unidad"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Unidad"
+        }
+      ]
+    },
+    {
+      "id": "macerado-de-canela",
+      "name": "Macerado de Canela",
+      "category": "macerados",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "macerado-de-cereza",
+      "name": "Macerado de Cereza",
+      "category": "macerados",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "1,5 Lt",
+          "presentation": "Caja x5"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "macerado-de-coco",
+      "name": "Macerado de Coco",
+      "category": "macerados",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "macerado-de-durazno",
+      "name": "Macerado de Durazno",
+      "category": "macerados",
+      "variants": [
+        {
+          "capacity": "375 ml",
+          "presentation": "Caja x24"
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "1,5 Lt",
+          "presentation": "Caja x5"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "macerado-de-fresa",
+      "name": "Macerado de Fresa",
+      "category": "macerados",
+      "variants": [
+        {
+          "capacity": "375 ml",
+          "presentation": "Caja x24"
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "1,5 Lt",
+          "presentation": "Caja x5"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "macerado-de-fresacuya",
+      "name": "Macerado de Fresacuya",
+      "category": "macerados",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "1,5 Lt",
+          "presentation": "Caja x5"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "macerado-de-maracumango",
+      "name": "Macerado de Maracumango",
+      "category": "macerados",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "1,5 Lt",
+          "presentation": "Caja x5"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "macerado-de-maracupina",
+      "name": "Macerado de Maracupiña",
+      "category": "macerados",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "1,5 Lt",
+          "presentation": "Caja x5"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "macerado-de-menta",
+      "name": "Macerado de Menta",
+      "category": "macerados",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "1,5 Lt",
+          "presentation": "Caja x5"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "macerado-de-pasa-morena",
+      "name": "Macerado de Pasa Morena",
+      "category": "macerados",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "1,5 Lt",
+          "presentation": "Caja x5"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "macerado-de-pasa-rubia",
+      "name": "Macerado de Pasa Rubia",
+      "category": "macerados",
+      "variants": [
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "1,5 Lt",
+          "presentation": "Caja x5"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "macerado-de-pina",
+      "name": "Macerado de Piña",
+      "category": "macerados",
+      "variants": [
+        {
+          "capacity": "375 ml",
+          "presentation": "Caja x24"
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "1,5 Lt",
+          "presentation": "Caja x5"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "macerado-de-sangria",
+      "name": "Macerado de Sangría",
+      "category": "macerados",
+      "variants": [
+        {
+          "capacity": "375 ml",
+          "presentation": "Caja x24"
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    },
+    {
+      "id": "macerado-de-uva",
+      "name": "Macerado de Uva",
+      "category": "macerados",
+      "variants": [
+        {
+          "capacity": "375 ml",
+          "presentation": "Caja x24"
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12"
+        },
+        {
+          "capacity": "1,5 Lt",
+          "presentation": "Caja x5"
+        },
+        {
+          "capacity": "2 Lt",
+          "presentation": "Caja x6"
+        },
+        {
+          "capacity": "4 Lt",
+          "presentation": "Caja x4"
+        }
+      ]
+    }
+  ]
+}

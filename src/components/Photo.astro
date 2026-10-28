@@ -1,0 +1,34 @@
+---
+import { Picture } from "astro:assets";
+const { src, alt, kind = "editorial", ...props } = Astro.props;
+const widths =
+  kind === "hero"
+    ? [640, 960, 1280, 1920]
+    : kind === "product"
+      ? [320, 480, 640, 800]
+      : kind === "dialog"
+        ? [600, 900, 1200]
+        : [480, 800, 1200];
+const sizes =
+  kind === "hero"
+    ? "(min-width:1408px) 610px, (min-width:1024px) calc(45vw - 30px), (min-width:768px) calc(45vw - 15px), calc(100vw - max(40px, 10vw) - 15px)"
+    : kind === "product"
+      ? "(min-width:1408px) 303px, (min-width:1024px) calc((90vw - 66px) / 4), (min-width:640px) calc((100vw - max(40px, 10vw) - 44px) / 3), calc((100vw - max(40px, 10vw) - 14px) / 2)"
+      : kind === "dialog"
+        ? "(min-width:640px) 400px, 90vw"
+        : "(min-width:1024px) 22vw, (min-width:640px) 44vw, 46vw";
+---
+
+<Picture
+  src={src}
+  alt={alt}
+  formats={["avif", "webp"]}
+  fallbackFormat="webp"
+  quality={kind === "product" ? 50 : 65}
+  widths={widths}
+  sizes={sizes}
+  loading={kind === "hero" ? "eager" : "lazy"}
+  fetchpriority={kind === "hero" ? "high" : "auto"}
+  decoding="async"
+  {...props}
+/>
