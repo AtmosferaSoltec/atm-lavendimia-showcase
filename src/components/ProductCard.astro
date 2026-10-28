@@ -1,6 +1,6 @@
 ---
 import Photo from "./Photo.astro";
-import { editorial } from "../lib/images";
+import NoImage from "./NoImage.astro";
 import {
   categories,
   site,
@@ -15,9 +15,9 @@ const p = product.data;
 const variants = [...p.variants].sort(
   (a, b) => capacityValue(a.capacity) - capacityValue(b.capacity),
 );
-const src = p.image ?? editorial[categories[p.category].image];
+const src = p.image;
 const reference = !p.image
-  ? "Imagen referencial de la categoría"
+  ? ""
   : p.imageIsReference
     ? "Recreación de estudio del producto"
     : "";
@@ -39,11 +39,15 @@ const reference = !p.image
     aria-label={`${categories[p.category].label}. ${reference}. ${productTitle(p.name)}. ${[...new Set(variants.map((v) => v.capacity ?? "Por confirmar"))].slice(0, 3).join(" / ")}. Descubrir. Consultar ${p.name} por WhatsApp`}
   >
     <div class:list={["product-image", { studio: !!p.image }]}>
-      <Photo
-        src={src}
-        kind="product"
-        alt={reference ? `${p.name}: ${reference.toLowerCase()}` : p.name}
-      />
+      {src ? (
+        <Photo
+          src={src}
+          kind="product"
+          alt={reference ? `${p.name}: ${reference.toLowerCase()}` : p.name}
+        />
+      ) : (
+        <NoImage />
+      )}
       <span class="category-badge">{categories[p.category].label}</span>
       {reference && <span class="reference-badge">{reference}</span>}
       <span class="product-plus" aria-hidden="true">
@@ -61,11 +65,15 @@ const reference = !p.image
     </div>
   </a>
   <template class="dialog-photo">
-    <Photo
-      src={src}
-      kind="dialog"
-      alt={reference ? `${p.name}: ${reference.toLowerCase()}` : p.name}
-    />
+    {src ? (
+      <Photo
+        src={src}
+        kind="dialog"
+        alt={reference ? `${p.name}: ${reference.toLowerCase()}` : p.name}
+      />
+    ) : (
+      <NoImage />
+    )}
     {reference && <p class="image-note">{reference}</p>}
   </template>
 </article>

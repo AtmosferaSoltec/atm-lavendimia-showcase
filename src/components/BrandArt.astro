@@ -1,0 +1,11 @@
+---
+// Typographic stand-in for photography: the brand symbol on a flat colour.
+const symbols = import.meta.glob<{ default: { src: string } }>("../assets/brand/*.svg", { eager: true });
+import { site } from "../data/site";
+const { class: className, ...props } = Astro.props;
+const symbol = symbols[site.logoSymbol].default;
+---
+
+<div class:list={["brand-art", className]} style={`--symbol:url(${symbol.src})`} aria-hidden="true" {...props}>
+  <slot />
+</div>

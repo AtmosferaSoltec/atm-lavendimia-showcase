@@ -1,6 +1,5 @@
 ---
-import Photo from "./Photo.astro";
-import { editorial } from "../lib/images";
+import BrandArt from "./BrandArt.astro";
 import { copy, site } from "../data/site";
 const symbols = import.meta.glob<{ default: { src: string } }>("../assets/brand/*.svg", { eager: true });
 const symbol = symbols[site.logoSymbol].default;
@@ -26,11 +25,7 @@ const symbol = symbols[site.logoSymbol].default;
     </p>
   </div>
   <figure class="hero-image">
-    <Photo
-      src={editorial.hero}
-      kind="hero"
-      alt={copy.ui.botellaDeVinoJuntoAUna}
-    />
+    <BrandArt class="hero-art" />
     <figcaption>{copy.hero.caption}</figcaption>
     <span class="seal" aria-hidden="true">
       {copy.ui.desdeIca}

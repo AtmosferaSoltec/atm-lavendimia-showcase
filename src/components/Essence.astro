@@ -1,18 +1,11 @@
 ---
-import Photo from "./Photo.astro";
+import BrandArt from "./BrandArt.astro";
 import WhatsAppLink from "./WhatsAppLink.astro";
-import { editorial } from "../lib/images";
 import { site, copy } from "../data/site";
 ---
 
 <section id="esencia" class="essence reveal" aria-labelledby="essence-title">
-  <div class="essence-image">
-    <Photo
-      src={editorial.hero}
-      alt={copy.ui.vinoUvasYUnaCopaListos}
-      sizes="(min-width:768px) 50vw, 100vw"
-    />
-  </div>
+  <BrandArt class="essence-image" />
   <div class="essence-copy">
     <p class="eyebrow">{copy.ui.seccion02NuestraEsencia}</p>
     <h2 id="essence-title">

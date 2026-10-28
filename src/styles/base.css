@@ -302,15 +302,9 @@ nav > a:hover {
   background: var(--paper);
   border-radius: 150px 150px 0 0;
 }
-.hero-image picture {
+.hero-art {
   height: 100%;
-  overflow: hidden;
   border-radius: inherit;
-}
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 .hero-image figcaption {
   position: absolute;
@@ -383,17 +377,15 @@ nav > a:hover {
 .collection-card:nth-child(odd) .collection-image {
   border-radius: 150px 150px 0 0;
 }
-.collection-image picture,
-.collection-image img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.collection-image::before {
+  transition: transform 0.6s;
 }
-.collection-image img,
+.collection-card:hover .collection-image::before {
+  transform: translate(-50%, -50%) scale(1.06);
+}
 .product-image img {
   transition: transform 0.6s;
 }
-.collection-card:hover img,
 .product-open:hover img {
   transform: scale(1.04);
 }
@@ -512,6 +504,25 @@ nav > a:hover {
 .product-image.studio img {
   object-fit: contain;
 }
+.no-image {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: var(--placeholder);
+  color: var(--placeholder-ink);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.no-image svg {
+  width: 28%;
+  height: auto;
+}
 .category-badge {
   position: absolute;
   top: 10px;
@@ -584,12 +595,7 @@ nav > a:hover {
   min-height: 560px;
   background: var(--paper);
 }
-.essence-image picture,
-.essence-image img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
+
 .essence-copy {
   align-self: center;
   padding: 65px clamp(30px, 5vw, 80px);
@@ -869,18 +875,6 @@ dialog::backdrop {
 .reveal-ready.is-visible {
   opacity: 1;
   transform: none;
-}
-@supports (animation-timeline: scroll()) {
-  .hero-image img {
-    animation: parallax linear both;
-    animation-timeline: scroll();
-    animation-range: 0px 800px;
-  }
-  @keyframes parallax {
-    to {
-      transform: translateY(16px) scale(1.045);
-    }
-  }
 }
 @media (min-width: 1440px) {
   .hero-image {
@@ -1199,4 +1193,49 @@ dialog::backdrop {
   margin: 16px 0;
   color: var(--muted);
   font-size: 12px;
+}
+
+/* Brand symbol on a flat colour, used where there is no photography. */
+.brand-art {
+  --art-bg: var(--wine);
+  --art-ink: var(--cream);
+  position: relative;
+  overflow: hidden;
+  background: var(--art-bg);
+}
+.brand-art::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 34%;
+  aspect-ratio: 360 / 512;
+  transform: translate(-50%, -50%);
+  background: var(--art-ink);
+  opacity: 0.85;
+  -webkit-mask: var(--symbol) center / contain no-repeat;
+  mask: var(--symbol) center / contain no-repeat;
+}
+.hero-art::before {
+  width: 30%;
+}
+.essence-image {
+  --art-bg: var(--wine);
+  --art-ink: var(--copper);
+}
+.essence-image::before {
+  width: 22%;
+}
+.collection-image[data-tone="vinos"] {
+  --art-bg: var(--wine);
+}
+.collection-image[data-tone="piscos"] {
+  --art-bg: var(--copper);
+}
+.collection-image[data-tone="cremas"] {
+  --art-bg: #d9c9a8;
+  --art-ink: var(--wine);
+}
+.collection-image[data-tone="macerados"] {
+  --art-bg: var(--wine-dark);
 }

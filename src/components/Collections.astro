@@ -1,6 +1,5 @@
 ---
-import Photo from "./Photo.astro";
-import { editorial } from "../lib/images";
+import BrandArt from "./BrandArt.astro";
 import { categories, copy } from "../data/site";
 const keys = ["vinos", "piscos", "cremas", "macerados"] as const;
 ---
@@ -25,20 +24,15 @@ const keys = ["vinos", "piscos", "cremas", "macerados"] as const;
   <div class="collection-grid">
     {keys.map((key, i) => (
       <a class="collection-card" href="#catalogo" data-filter-link={key}>
-        <div class="collection-image">
-          <Photo
-            src={editorial[categories[key].image]}
-            alt={`Ambientación referencial de ${categories[key].label.toLowerCase()}`}
-          />
+        <BrandArt class="collection-image" data-tone={key}>
           <span class="image-number">0{i + 1}</span>
           <span class="round-arrow" aria-hidden="true">
             ↗
           </span>
-        </div>
+        </BrandArt>
         <h3>{categories[key].short}</h3>
         <p>{categories[key].phrase}</p>
       </a>
     ))}
   </div>
-  <p class="image-note">{copy.ui.fotografiasDeAmbientacionLasImagenesSon}</p>
 </section>

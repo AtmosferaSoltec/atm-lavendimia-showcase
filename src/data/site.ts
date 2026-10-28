@@ -22,31 +22,26 @@ export const categories = {
     label: "Vinos",
     short: "Vinos",
     phrase: "Para quedarse un poco más.",
-    image: "hero",
   },
   especiales: {
     label: "Especiales",
     short: "Especiales",
     phrase: "Un vino para una ocasión especial.",
-    image: "hero",
   },
   piscos: {
     label: "Piscos",
     short: "Piscos",
     phrase: "Un brindis muy nuestro.",
-    image: "pisco",
   },
   cremas: {
     label: "Cremas de pisco",
     short: "Cremas",
     phrase: "Un pequeño gusto, un gran momento.",
-    image: "crema",
   },
   macerados: {
     label: "Macerados",
     short: "Macerados",
     phrase: "Atrévete a probar algo distinto.",
-    image: "macerado",
   },
 } as const;
 export const copy = {
@@ -56,8 +51,6 @@ export const copy = {
     brindar: "brindar?",
     deLosClasicosDeSiempre: "De los clásicos de siempre",
     aTuProximoGranDescubrimiento: "a tu próximo gran descubrimiento.",
-    fotografiasDeAmbientacionLasImagenesSon:
-      "Fotografías de ambientación. Las imágenes son referenciales.",
     seccion03SiempreHayUnMotivo: "03 / SIEMPRE HAY UN MOTIVO",
     elMomentoLoPonesTu: "El momento lo pones tú.",
     laCopaLaEncontramosJuntos: "La copa, la encontramos juntos.",
@@ -67,8 +60,6 @@ export const copy = {
     nbspExploraATuGusto: "↓  EXPLORA A TU GUSTO",
     vinosPiscosCremasMaceradosDesdeIca:
       "VINOS · PISCOS · CREMAS · MACERADOS · DESDE ICA · ",
-    botellaDeVinoJuntoAUna:
-      "Botella de vino junto a una copa y uvas, en una mesa bañada de luz cálida",
     descubrir: "Descubrir ↗",
     desdeIcaPeru: "Desde Ica, Perú.",
     explora: "EXPLORA",
@@ -118,8 +109,6 @@ export const copy = {
     masQueUnaCopa: "Más que una copa.",
     loQueCompartimos: "Lo que compartimos.",
     nosEncantaraConocerte: "Nos encantará conocerte",
-    vinoUvasYUnaCopaListos:
-      "Vino, uvas y una copa listos para compartir en la mesa",
   },
   announcement: "DESDE ICA, CON MUCHO GUSTO.",
   hero: {
