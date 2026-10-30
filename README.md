@@ -77,3 +77,7 @@ Los tres SVG originales entregados están en `src/assets/brand/lavendimia-{logot
 El diálogo explica la presentación, capacidad por envase y cantidad incluida. «Caja x12» se muestra como «Caja de 12 unidades», sin modificar el JSON ni asumir que todos los envases son botellas. Las capacidades ausentes se muestran como «Por confirmar». Se mantiene una imagen por producto.
 
 El botón «Consultar esta presentación» envía a WhatsApp el producto y la opción elegida, y pide precio y disponibilidad. La cantidad de cajas que se desea comprar se acuerda por WhatsApp; no hay carrito ni selector de cantidad de pedido.
+
+### Imágenes de la demo
+
+`src/data/imagery.ts` centraliza la ambientación y las tres fotos reutilizadas cuando un producto no tiene `image`. El respaldo es solo referencial y se identifica en tarjeta y detalle. Para sustituirlo, asigna la foto correspondiente en `src/data/catalog.json`; tendrá prioridad automáticamente. Si la nueva foto es real, establece `imageIsReference: false`.

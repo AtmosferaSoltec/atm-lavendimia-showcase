@@ -46,6 +46,8 @@ export const categories = {
 } as const;
 export const copy = {
   ui: {
+    referenceImage: "Imagen referencial",
+    demoImageNote: "Imagen referencial para la demo; la etiqueta y el envase pueden variar.",
     seccion01NuestraColeccion: "01 / NUESTRA COLECCIÓN",
     comoTeGusta: "¿Cómo te gusta ",
     brindar: "brindar?",

@@ -1,4 +1,6 @@
 ---
+import Photo from "./Photo.astro";
+import { editorial } from "../data/imagery";
 import { copy } from "../data/site";
 ---
 
@@ -16,6 +18,7 @@ import { copy } from "../data/site";
   <div class="moments-grid">
     {copy.moments.map((m, i) => (
       <a href="#catalogo" data-filter-link={m.category}>
+        <div class="moment-image"><Photo src={editorial[m.category as keyof typeof editorial]} kind="moment" alt="" /></div>
         <span class="moment-number">0{i + 1}</span>
         <h3>{m.title}</h3>
         <p>{m.text}</p>

@@ -16,7 +16,11 @@ const sizes =
       ? "(min-width:1408px) 303px, (min-width:1024px) calc((90vw - 66px) / 4), (min-width:640px) calc((100vw - max(40px, 10vw) - 44px) / 3), calc((100vw - max(40px, 10vw) - 14px) / 2)"
       : kind === "dialog"
         ? "(min-width:640px) 400px, 90vw"
-        : "(min-width:1024px) 22vw, (min-width:640px) 44vw, 46vw";
+        : kind === "feature"
+          ? "(min-width:768px) 50vw, 100vw"
+          : kind === "moment"
+            ? "(min-width:768px) 30vw, 90vw"
+            : "(min-width:768px) 22vw, 46vw";
 ---
 
 <Picture

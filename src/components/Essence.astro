@@ -1,11 +1,12 @@
 ---
-import BrandArt from "./BrandArt.astro";
+import Photo from "./Photo.astro";
+import { editorial } from "../data/imagery";
 import WhatsAppLink from "./WhatsAppLink.astro";
 import { site, copy } from "../data/site";
 ---
 
 <section id="esencia" class="essence reveal" aria-labelledby="essence-title">
-  <BrandArt class="essence-image" />
+  <div class="essence-image"><Photo src={editorial.macerados} kind="feature" alt="Botellas y copas en una mesa cálida, una invitación a compartir" /></div>
   <div class="essence-copy">
     <p class="eyebrow">{copy.ui.seccion02NuestraEsencia}</p>
     <h2 id="essence-title">

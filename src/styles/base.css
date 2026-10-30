@@ -374,19 +374,47 @@ nav > a:hover {
   overflow: hidden;
   background: var(--paper);
 }
-.collection-card:nth-child(odd) .collection-image {
-  border-radius: 150px 150px 0 0;
+.collection-image {
+  border-radius: 4px;
 }
-.collection-image::before {
-  transition: transform 0.6s;
+.collection-image picture,
+.collection-image img,
+.hero-image > picture,
+.hero-image > picture img,
+.essence-image picture,
+.essence-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.collection-card:hover .collection-image::before {
-  transform: translate(-50%, -50%) scale(1.06);
+.hero-image > picture {
+  border-radius: inherit;
+  overflow: hidden;
+}
+.collection-image img,
+.moment-image img {
+  transition: transform 0.7s cubic-bezier(.2,.7,.2,1);
+}
+.collection-card:is(:hover, :focus-visible) img,
+.moments-grid > a:is(:hover, :focus-visible) img {
+  transform: scale(1.055);
+}
+.collection-image::after {
+  content: "";
+  position: absolute;
+  inset: 55% 0 0;
+  background: linear-gradient(transparent, #321b245c);
+  pointer-events: none;
+}
+.image-number, .round-arrow { z-index: 1; }
+.round-arrow { transition: transform 0.3s; }
+.collection-card:is(:hover, :focus-visible) .round-arrow {
+  transform: translate(2px, -3px);
 }
 .product-image img {
   transition: transform 0.6s;
 }
-.product-open:hover img {
+.product-open:is(:hover, :focus-visible) img {
   transform: scale(1.04);
 }
 .collection-card h3 {
@@ -440,12 +468,13 @@ nav > a:hover {
 }
 .filters {
   display: flex;
-  gap: 3px;
+  gap: 6px;
   flex-wrap: wrap;
 }
 .filters button {
   font-size: 11px;
-  background: none;
+  background: var(--paper);
+  border-radius: 2px;
   min-height: 44px;
   padding: 10px 13px;
 }
@@ -550,7 +579,7 @@ nav > a:hover {
   height: 32px;
   transition: transform 0.4s;
 }
-.product-open:hover .product-plus {
+.product-open:is(:hover, :focus-visible) .product-plus {
   transform: rotate(90deg);
 }
 .product-card h3 {
@@ -593,8 +622,12 @@ nav > a:hover {
 }
 .essence-image {
   min-height: 560px;
+  position: relative;
+  overflow: hidden;
   background: var(--paper);
 }
+
+.essence-image picture { position: absolute; inset: 0; }
 
 .essence-copy {
   align-self: center;
@@ -636,14 +669,22 @@ nav > a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   text-align: left;
-  border-block: 1px solid var(--rule);
+  gap: 24px;
 }
 .moments-grid > a {
-  padding: 36px;
-  border-right: 1px solid var(--rule);
+  padding: 0 0 24px;
+  border-bottom: 1px solid var(--rule);
 }
-.moments-grid > a:last-child {
-  border: 0;
+.moment-image {
+  aspect-ratio: 3/2;
+  overflow: hidden;
+  margin-bottom: 22px;
+  border-radius: 4px;
+}
+.moment-image picture, .moment-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .moment-number {
   font: italic 22px Cormorant;
@@ -919,7 +960,7 @@ dialog::backdrop {
     min-height: 520px;
   }
   .moments-grid > a {
-    padding: 25px;
+    padding: 0 0 24px;
   }
   .footer-grid {
     grid-template-columns: 1.5fr 1fr 1.5fr;
@@ -1029,7 +1070,7 @@ dialog::backdrop {
     grid-template-columns: 1fr;
   }
   .moments-grid > a {
-    padding: 28px 10px;
+    padding: 0 0 24px;
     border: 0;
     border-bottom: 1px solid var(--rule);
   }
@@ -1195,47 +1236,19 @@ dialog::backdrop {
   font-size: 12px;
 }
 
-/* Brand symbol on a flat colour, used where there is no photography. */
-.brand-art {
-  --art-bg: var(--wine);
-  --art-ink: var(--cream);
-  position: relative;
-  overflow: hidden;
-  background: var(--art-bg);
+
+/* Small visual cues keep browsing light, including on touch screens. */
+.product-image { border-radius: 4px; }
+.product-card { transition: transform .35s; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .product-card:hover { transform: translateY(-4px); }
 }
-.brand-art::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 34%;
-  aspect-ratio: 360 / 512;
-  transform: translate(-50%, -50%);
-  background: var(--art-ink);
-  opacity: 0.85;
-  -webkit-mask: var(--symbol) center / contain no-repeat;
-  mask: var(--symbol) center / contain no-repeat;
+.filters button:focus-visible, .filters button:hover {
+  outline: 1px solid var(--copper);
+  outline-offset: 2px;
 }
-.hero-art::before {
-  width: 30%;
-}
-.essence-image {
-  --art-bg: var(--wine);
-  --art-ink: var(--copper);
-}
-.essence-image::before {
-  width: 22%;
-}
-.collection-image[data-tone="vinos"] {
-  --art-bg: var(--wine);
-}
-.collection-image[data-tone="piscos"] {
-  --art-bg: var(--copper);
-}
-.collection-image[data-tone="cremas"] {
-  --art-bg: #d9c9a8;
-  --art-ink: var(--wine);
-}
-.collection-image[data-tone="macerados"] {
-  --art-bg: var(--wine-dark);
+.search:focus-within { outline: 1px solid var(--copper); outline-offset: 3px; }
+.hero-image { box-shadow: 14px 16px 0 var(--paper); }
+@media (max-width: 767px) {
+  .hero-image { box-shadow: 8px 10px 0 var(--paper); margin-right: 8px; }
 }
