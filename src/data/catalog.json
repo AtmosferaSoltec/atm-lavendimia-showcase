@@ -12,12 +12,18 @@
       "category": "macerados",
       "variants": [
         {
+          "capacity": "750 ml",
+          "presentation": "Unidad",
+          "price": 15
+        },
+        {
           "capacity": "375 ml",
           "presentation": "Caja x24"
         },
         {
           "capacity": "750 ml",
-          "presentation": "Caja x12"
+          "presentation": "Caja x12",
+          "price": 120
         },
         {
           "capacity": "1,5 Lt",
@@ -25,11 +31,13 @@
         },
         {
           "capacity": "2 Lt",
-          "presentation": "Caja x6"
+          "presentation": "Caja x6",
+          "price": 130
         },
         {
           "capacity": "4 Lt",
-          "presentation": "Caja x4"
+          "presentation": "Caja x4",
+          "price": 140
         }
       ],
       "image": "macerado-maracuya.png",
@@ -42,15 +50,23 @@
       "variants": [
         {
           "capacity": "750 ml",
-          "presentation": "Caja x12"
+          "presentation": "Unidad",
+          "price": 15
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12",
+          "price": 120
         },
         {
           "capacity": "2 Lt",
-          "presentation": "Caja x6"
+          "presentation": "Caja x6",
+          "price": 130
         },
         {
           "capacity": "4 Lt",
-          "presentation": "Caja x4"
+          "presentation": "Caja x4",
+          "price": 140
         }
       ],
       "image": "macerado-canela.png",
@@ -63,7 +79,13 @@
       "variants": [
         {
           "capacity": "750 ml",
-          "presentation": "Caja x12"
+          "presentation": "Unidad",
+          "price": 15
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12",
+          "price": 120
         },
         {
           "capacity": "1,5 Lt",
@@ -71,11 +93,13 @@
         },
         {
           "capacity": "2 Lt",
-          "presentation": "Caja x6"
+          "presentation": "Caja x6",
+          "price": 130
         },
         {
           "capacity": "4 Lt",
-          "presentation": "Caja x4"
+          "presentation": "Caja x4",
+          "price": 140
         }
       ],
       "image": "macerado-cereza.png",
@@ -88,15 +112,23 @@
       "variants": [
         {
           "capacity": "750 ml",
-          "presentation": "Caja x12"
+          "presentation": "Unidad",
+          "price": 15
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12",
+          "price": 120
         },
         {
           "capacity": "2 Lt",
-          "presentation": "Caja x6"
+          "presentation": "Caja x6",
+          "price": 130
         },
         {
           "capacity": "4 Lt",
-          "presentation": "Caja x4"
+          "presentation": "Caja x4",
+          "price": 140
         }
       ],
       "image": "macerado-coco.png",
@@ -108,12 +140,18 @@
       "category": "macerados",
       "variants": [
         {
+          "capacity": "750 ml",
+          "presentation": "Unidad",
+          "price": 15
+        },
+        {
           "capacity": "375 ml",
           "presentation": "Caja x24"
         },
         {
           "capacity": "750 ml",
-          "presentation": "Caja x12"
+          "presentation": "Caja x12",
+          "price": 120
         },
         {
           "capacity": "1,5 Lt",
@@ -121,11 +159,13 @@
         },
         {
           "capacity": "2 Lt",
-          "presentation": "Caja x6"
+          "presentation": "Caja x6",
+          "price": 130
         },
         {
           "capacity": "4 Lt",
-          "presentation": "Caja x4"
+          "presentation": "Caja x4",
+          "price": 140
         }
       ],
       "image": "macerado-durazno.png",
@@ -137,12 +177,18 @@
       "category": "macerados",
       "variants": [
         {
+          "capacity": "750 ml",
+          "presentation": "Unidad",
+          "price": 15
+        },
+        {
           "capacity": "375 ml",
           "presentation": "Caja x24"
         },
         {
           "capacity": "750 ml",
-          "presentation": "Caja x12"
+          "presentation": "Caja x12",
+          "price": 120
         },
         {
           "capacity": "1,5 Lt",
@@ -150,11 +196,13 @@
         },
         {
           "capacity": "2 Lt",
-          "presentation": "Caja x6"
+          "presentation": "Caja x6",
+          "price": 130
         },
         {
           "capacity": "4 Lt",
-          "presentation": "Caja x4"
+          "presentation": "Caja x4",
+          "price": 140
         }
       ],
       "image": "macerado-fresa.png",
@@ -167,7 +215,13 @@
       "variants": [
         {
           "capacity": "750 ml",
-          "presentation": "Caja x12"
+          "presentation": "Unidad",
+          "price": 15
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12",
+          "price": 120
         },
         {
           "capacity": "1,5 Lt",
@@ -175,11 +229,13 @@
         },
         {
           "capacity": "2 Lt",
-          "presentation": "Caja x6"
+          "presentation": "Caja x6",
+          "price": 130
         },
         {
           "capacity": "4 Lt",
-          "presentation": "Caja x4"
+          "presentation": "Caja x4",
+          "price": 140
         }
       ],
       "image": "macerado-fresacuya.png",
@@ -192,7 +248,13 @@
       "variants": [
         {
           "capacity": "750 ml",
-          "presentation": "Caja x12"
+          "presentation": "Unidad",
+          "price": 15
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12",
+          "price": 120
         },
         {
           "capacity": "1,5 Lt",
@@ -200,11 +262,13 @@
         },
         {
           "capacity": "2 Lt",
-          "presentation": "Caja x6"
+          "presentation": "Caja x6",
+          "price": 130
         },
         {
           "capacity": "4 Lt",
-          "presentation": "Caja x4"
+          "presentation": "Caja x4",
+          "price": 140
         }
       ],
       "image": "macerado-maracumango.png",
@@ -217,7 +281,13 @@
       "variants": [
         {
           "capacity": "750 ml",
-          "presentation": "Caja x12"
+          "presentation": "Unidad",
+          "price": 15
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12",
+          "price": 120
         },
         {
           "capacity": "1,5 Lt",
@@ -225,11 +295,13 @@
         },
         {
           "capacity": "2 Lt",
-          "presentation": "Caja x6"
+          "presentation": "Caja x6",
+          "price": 130
         },
         {
           "capacity": "4 Lt",
-          "presentation": "Caja x4"
+          "presentation": "Caja x4",
+          "price": 140
         }
       ],
       "image": "macerado-maracupina.png",
@@ -242,7 +314,13 @@
       "variants": [
         {
           "capacity": "750 ml",
-          "presentation": "Caja x12"
+          "presentation": "Unidad",
+          "price": 15
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12",
+          "price": 120
         },
         {
           "capacity": "1,5 Lt",
@@ -250,11 +328,13 @@
         },
         {
           "capacity": "2 Lt",
-          "presentation": "Caja x6"
+          "presentation": "Caja x6",
+          "price": 130
         },
         {
           "capacity": "4 Lt",
-          "presentation": "Caja x4"
+          "presentation": "Caja x4",
+          "price": 140
         }
       ],
       "image": "macerado-menta.png",
@@ -267,7 +347,13 @@
       "variants": [
         {
           "capacity": "750 ml",
-          "presentation": "Caja x12"
+          "presentation": "Unidad",
+          "price": 15
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12",
+          "price": 120
         },
         {
           "capacity": "1,5 Lt",
@@ -275,11 +361,13 @@
         },
         {
           "capacity": "2 Lt",
-          "presentation": "Caja x6"
+          "presentation": "Caja x6",
+          "price": 130
         },
         {
           "capacity": "4 Lt",
-          "presentation": "Caja x4"
+          "presentation": "Caja x4",
+          "price": 140
         }
       ],
       "image": "macerado-pasas.png",
@@ -292,7 +380,13 @@
       "variants": [
         {
           "capacity": "750 ml",
-          "presentation": "Caja x12"
+          "presentation": "Unidad",
+          "price": 15
+        },
+        {
+          "capacity": "750 ml",
+          "presentation": "Caja x12",
+          "price": 120
         },
         {
           "capacity": "1,5 Lt",
@@ -300,11 +394,13 @@
         },
         {
           "capacity": "2 Lt",
-          "presentation": "Caja x6"
+          "presentation": "Caja x6",
+          "price": 130
         },
         {
           "capacity": "4 Lt",
-          "presentation": "Caja x4"
+          "presentation": "Caja x4",
+          "price": 140
         }
       ],
       "image": "macerado-pasas-rubias.png",
@@ -316,12 +412,18 @@
       "category": "macerados",
       "variants": [
         {
+          "capacity": "750 ml",
+          "presentation": "Unidad",
+          "price": 15
+        },
+        {
           "capacity": "375 ml",
           "presentation": "Caja x24"
         },
         {
           "capacity": "750 ml",
-          "presentation": "Caja x12"
+          "presentation": "Caja x12",
+          "price": 120
         },
         {
           "capacity": "1,5 Lt",
@@ -329,11 +431,13 @@
         },
         {
           "capacity": "2 Lt",
-          "presentation": "Caja x6"
+          "presentation": "Caja x6",
+          "price": 130
         },
         {
           "capacity": "4 Lt",
-          "presentation": "Caja x4"
+          "presentation": "Caja x4",
+          "price": 140
         }
       ],
       "image": "macerado-pina.png",
@@ -345,20 +449,28 @@
       "category": "macerados",
       "variants": [
         {
+          "capacity": "750 ml",
+          "presentation": "Unidad",
+          "price": 15
+        },
+        {
           "capacity": "375 ml",
           "presentation": "Caja x24"
         },
         {
           "capacity": "750 ml",
-          "presentation": "Caja x12"
+          "presentation": "Caja x12",
+          "price": 120
         },
         {
           "capacity": "2 Lt",
-          "presentation": "Caja x6"
+          "presentation": "Caja x6",
+          "price": 130
         },
         {
           "capacity": "4 Lt",
-          "presentation": "Caja x4"
+          "presentation": "Caja x4",
+          "price": 140
         }
       ],
       "image": "macerado-sangria.png",
@@ -370,12 +482,18 @@
       "category": "macerados",
       "variants": [
         {
+          "capacity": "750 ml",
+          "presentation": "Unidad",
+          "price": 15
+        },
+        {
           "capacity": "375 ml",
           "presentation": "Caja x24"
         },
         {
           "capacity": "750 ml",
-          "presentation": "Caja x12"
+          "presentation": "Caja x12",
+          "price": 120
         },
         {
           "capacity": "1,5 Lt",
@@ -383,11 +501,13 @@
         },
         {
           "capacity": "2 Lt",
-          "presentation": "Caja x6"
+          "presentation": "Caja x6",
+          "price": 130
         },
         {
           "capacity": "4 Lt",
-          "presentation": "Caja x4"
+          "presentation": "Caja x4",
+          "price": 140
         }
       ],
       "image": "macerado-uva.png",

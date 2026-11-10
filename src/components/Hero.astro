@@ -1,6 +1,6 @@
 ---
 import Photo from "./Photo.astro";
-import { editorial } from "../data/imagery";
+import { editorial, editorialAlt } from "../data/imagery";
 import { copy, site } from "../data/site";
 const symbols = import.meta.glob<{ default: { src: string } }>("../assets/brand/*.svg", { eager: true });
 const symbol = symbols[site.logoSymbol].default;
@@ -26,7 +26,7 @@ const symbol = symbols[site.logoSymbol].default;
     </p>
   </div>
   <figure class="hero-image">
-    <Photo src={editorial.vinos} kind="hero" alt="Una copa de vino y una botella junto a uvas, bajo la luz cálida de la tarde" />
+    <Photo src={editorial.hero} kind="hero" alt={editorialAlt.hero} />
     <figcaption>{copy.hero.caption}</figcaption>
     <span class="seal" aria-hidden="true">
       {copy.ui.desdeIca}

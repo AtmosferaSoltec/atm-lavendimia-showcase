@@ -1,6 +1,6 @@
 ---
 import Photo from "./Photo.astro";
-import { editorial } from "../data/imagery";
+import { editorial, editorialAlt } from "../data/imagery";
 import { categories, copy } from "../data/site";
 const keys = ["vinos", "piscos", "cremas", "macerados"] as const;
 ---
@@ -26,7 +26,7 @@ const keys = ["vinos", "piscos", "cremas", "macerados"] as const;
     {keys.map((key, i) => (
       <a class="collection-card" href="#catalogo" data-filter-link={key}>
         <div class="collection-image">
-          <Photo src={editorial[key]} alt="" />
+          <Photo src={editorial[key]} alt={editorialAlt[key]} />
           <span class="image-number">0{i + 1}</span>
           <span class="round-arrow" aria-hidden="true">
             ↗

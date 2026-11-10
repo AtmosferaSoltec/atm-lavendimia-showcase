@@ -1,5 +1,6 @@
 ---
 import { site, whatsappUrl, copy } from "../data/site";
+import Select from "./ui/Select.astro";
 ---
 
 <dialog id="product-dialog" aria-labelledby="dialog-title">
@@ -12,8 +13,7 @@ import { site, whatsappUrl, copy } from "../data/site";
       <p id="dialog-category" class="eyebrow"></p>
       <h2 id="dialog-title"></h2>
       <p id="dialog-phrase"></p>
-      <label for="presentation">{copy.ui.eligeTuPresentacion}</label>
-      <select id="presentation" aria-describedby="presentation-help"></select>
+      <Select id="presentation" label={copy.ui.eligeTuPresentacion} describedby="presentation-help" />
       <dl class="presentation-details" aria-live="polite" aria-atomic="true">
         <div><dt>{copy.ui.presentationLabel}</dt><dd id="selected-presentation"></dd></div>
         <div><dt>{copy.ui.capacityLabel}</dt><dd id="selected-capacity"></dd></div>

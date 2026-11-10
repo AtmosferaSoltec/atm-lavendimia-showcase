@@ -1,0 +1,46 @@
+---
+/**
+ * Select de la marca. Úsalo en vez de <select>:
+ *   <Select id="ciudad" name="ciudad" label="Ciudad" options={[{ value: "ica", label: "Ica" }]} />
+ * Las opciones se pueden dejar vacías y llenarlas por JS (el select se actualiza solo).
+ * Sin JavaScript se ve como un select nativo con el mismo estilo.
+ */
+interface Option {
+  value: string;
+  label: string;
+  meta?: string;
+  disabled?: boolean;
+}
+interface Props {
+  id: string;
+  name?: string;
+  label?: string;
+  options?: Option[];
+  value?: string;
+  placeholder?: string;
+  required?: boolean;
+  describedby?: string;
+}
+const { id, name = id, label, options = [], value, placeholder, required, describedby } = Astro.props;
+---
+
+<div class="ui-select">
+  {label && <label for={id}>{label}</label>}
+  <select
+    id={id}
+    name={name}
+    required={required}
+    aria-describedby={describedby}
+    data-ui-select
+    data-placeholder={placeholder}
+  >
+    {options.map((o) => (
+      <option value={o.value} data-meta={o.meta} disabled={o.disabled} selected={o.value === value}>
+        {o.label}
+      </option>
+    ))}
+  </select>
+</div>
+<script>
+  import "../../scripts/ui-select";
+</script>

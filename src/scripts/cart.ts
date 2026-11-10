@@ -14,10 +14,11 @@ const MAX_QTY = 99;
 const variantKey = (v: Variant) => `${v.presentation}|${v.capacity ?? ""}`;
 
 // Catálogo leído del DOM: el carrito solo guarda id + presentación + cantidad.
-const catalog = new Map<string, { name: string; variants: Variant[] }>();
+const catalog = new Map<string, { name: string; thumb: string; variants: Variant[] }>();
 document.querySelectorAll<HTMLElement>("[data-product]").forEach((card) =>
   catalog.set(card.dataset.id!, {
     name: card.dataset.name!,
+    thumb: card.dataset.thumb ?? "",
     variants: JSON.parse(card.dataset.variants!),
   }),
 );
@@ -78,6 +79,17 @@ function render() {
   list.replaceChildren(
     ...rows.map(({ item, line }) => {
       const li = document.createElement("li");
+      const thumbSrc = catalog.get(item.id)?.thumb;
+      if (thumbSrc) {
+        const img = document.createElement("img");
+        img.className = "cart-thumb";
+        img.src = thumbSrc;
+        img.alt = "";
+        img.width = 64;
+        img.height = 96;
+        img.loading = "lazy";
+        li.append(img);
+      }
       const info = document.createElement("div");
       const name = document.createElement("strong");
       name.textContent = line.name;
@@ -102,6 +114,7 @@ function render() {
       const remove = stepper(`Eliminar ${line.name}`, "×", () => change(item, 0));
       remove.className = "cart-remove";
       li.append(info, qty, remove);
+      li.classList.toggle("has-thumb", Boolean(thumbSrc));
       return li;
     }),
   );

@@ -16,7 +16,7 @@ const chips = [
 ];
 const more = document.querySelector<HTMLButtonElement>("#more")!;
 let category = "all",
-  limit = 8;
+  limit = 10;
 const normalize = (s: string) =>
   s
     .normalize("NFD")
@@ -44,17 +44,17 @@ function filter() {
 chips.forEach((chip) =>
   chip.addEventListener("click", () => {
     category = chip.dataset.filter!;
-    limit = 8;
+    limit = 10;
     filter();
   }),
 );
 search.addEventListener("input", () => {
-  limit = 8;
+  limit = 10;
   filter();
 });
 more.addEventListener("click", () => {
   const first = limit;
-  limit += 8;
+  limit += 10;
   const matches = filter();
   matches[first]
     ?.querySelector<HTMLAnchorElement>("a")
@@ -63,7 +63,7 @@ more.addEventListener("click", () => {
 document.querySelector("#clear-filters")!.addEventListener("click", () => {
   category = "all";
   search.value = "";
-  limit = 8;
+  limit = 10;
   filter();
   search.focus();
 });
@@ -71,7 +71,7 @@ document.querySelectorAll<HTMLElement>("[data-filter-link]").forEach((link) =>
   link.addEventListener("click", () => {
     category = link.dataset.filterLink!;
     search.value = "";
-    limit = 8;
+    limit = 10;
     filter();
   }),
 );
@@ -136,14 +136,15 @@ cards.forEach((card) =>
           .content.cloneNode(true),
       );
     select.replaceChildren(
-      ...variants.map(
-        (v, i) =>
-          new Option(
-            presentationDetails(v).label,
-            String(i),
-          ),
-      ),
+      ...variants.map((v, i) => {
+        const option = new Option(presentationDetails(v).label, String(i));
+        if (site.showPrices && v.price !== undefined) option.dataset.meta = formatPrice(v.price);
+        return option;
+      }),
     );
+    // Abre en la primera presentación con precio (si hay alguna).
+    select.value = String(Math.max(0, variants.findIndex((v) => v.price !== undefined)));
+    select.dispatchEvent(new Event("ui-select:sync"));
     setQty(1);
     updateVariant();
     dialog.showModal();

@@ -1,5 +1,6 @@
 ---
 import Photo from "./Photo.astro";
+import { getImage } from "astro:assets";
 import {
   categories,
   site,
@@ -19,6 +20,7 @@ const prices = site.showPrices
   ? variants.flatMap((v) => (v.price === undefined ? [] : [v.price]))
   : [];
 const src = p.image;
+const thumb = p.image ? (await getImage({ src: p.image, width: 160, format: "webp", quality: 60 })).src : "";
 const reference = p.imageIsReference
     ? "Recreación de estudio del producto"
     : "";
@@ -30,6 +32,7 @@ const reference = p.imageIsReference
   data-id={p.id}
   data-category={p.category}
   data-name={p.name}
+  data-thumb={thumb}
   data-variants={JSON.stringify(variants.map(({ price, ...variant }) => site.showPrices ? { ...variant, price } : variant))}
   data-phrase={categories[p.category].phrase}
 >

@@ -1,0 +1,21 @@
+---
+/**
+ * Campo de fecha de la marca (calendario nativo del dispositivo, con el estilo del sitio).
+ *   <DateField id="entrega" label="Fecha de entrega" min="2026-11-15" />
+ */
+interface Props {
+  id: string;
+  name?: string;
+  label?: string;
+  value?: string;
+  min?: string;
+  max?: string;
+  required?: boolean;
+}
+const { id, name = id, label, value, min, max, required } = Astro.props;
+---
+
+<div class="ui-field">
+  {label && <label for={id}>{label}</label>}
+  <input type="date" id={id} name={name} value={value} min={min} max={max} required={required} />
+</div>

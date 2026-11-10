@@ -507,8 +507,8 @@ nav > a:hover {
 }
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 32px 22px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 26px 16px;
 }
 .product-card {
   min-width: 0;
@@ -583,8 +583,8 @@ nav > a:hover {
   transform: rotate(90deg);
 }
 .product-card h3 {
-  font-size: 27px;
-  margin-top: 17px;
+  font-size: 22px;
+  margin-top: 12px;
 }
 .product-bottom {
   display: flex;
@@ -884,13 +884,6 @@ dialog::backdrop {
   margin: 30px 0 8px;
   font-size: 12px;
 }
-.dialog-content select {
-  min-height: 48px;
-  width: 100%;
-  border: 1px solid #9f9183;
-  background: var(--cream);
-  padding: 10px;
-}
 .dialog-content .button {
   width: 100%;
   gap: 15px;
@@ -995,7 +988,7 @@ dialog::backdrop {
     width: 100%;
   }
   .product-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .essence-copy {
     padding: 45px 30px;
@@ -1014,6 +1007,9 @@ dialog::backdrop {
   }
 }
 @media (max-width: 767px) {
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
   .section {
     padding-block: 64px;
   }
@@ -1171,7 +1167,7 @@ dialog::backdrop {
     gap: 26px 14px;
   }
   .product-card h3 {
-    font-size: 25px;
+    font-size: 20px;
   }
   .product-bottom {
     flex-direction: column;
@@ -1416,6 +1412,14 @@ dialog::backdrop {
   padding: 16px 0;
   border-bottom: 1px solid var(--rule);
 }
+.cart-lines li.has-thumb { grid-template-columns: 64px 1fr auto auto; }
+.cart-thumb {
+  width: 64px;
+  height: 96px;
+  object-fit: contain;
+  background: var(--studio);
+  border-radius: 4px;
+}
 .cart-lines li > div:first-child {
   display: grid;
   gap: 2px;
@@ -1505,3 +1509,108 @@ dialog::backdrop {
     bottom: 28px;
   }
 }
+
+/* ---------- Componentes de formulario (src/components/ui) ---------- */
+.ui-select, .ui-field { position: relative; display: block; }
+.ui-select > label, .ui-field > label {
+  display: block;
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: .04em;
+}
+.ui-select select, .ui-field input {
+  width: 100%;
+  min-height: 52px;
+  padding: 0 16px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: #fffdf8;
+  color: var(--ink);
+  transition: border-color .2s, box-shadow .2s;
+}
+.ui-select select {
+  appearance: none;
+  padding-right: 44px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='m5 8 5 5 5-5' fill='none' stroke='%2354242e' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 18px;
+}
+.ui-select select:hover, .ui-field input:hover { border-color: #b9ab9b; }
+.ui-select select:focus-visible, .ui-field input:focus-visible {
+  outline: 0;
+  border-color: var(--wine);
+  box-shadow: 0 0 0 3px #54242e24;
+}
+/* Con JS el <select> nativo queda oculto y manda el componente. */
+.ui-select.is-enhanced select {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 1px;
+  min-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.ui-select__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: 52px;
+  padding: 0 14px 0 16px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: #fffdf8;
+  color: var(--ink);
+  text-align: left;
+  transition: border-color .2s, box-shadow .2s;
+}
+.ui-select__trigger:hover { border-color: #b9ab9b; }
+.ui-select__trigger:focus-visible, .ui-select.is-open .ui-select__trigger {
+  outline: 0;
+  border-color: var(--wine);
+  box-shadow: 0 0 0 3px #54242e24;
+}
+.ui-select__trigger:disabled { opacity: .55; }
+.ui-select__value { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ui-select__value.is-placeholder { color: var(--muted); }
+.ui-select__chevron { flex: none; color: var(--wine); transition: transform .2s; }
+.ui-select.is-open .ui-select__chevron { transform: rotate(180deg); }
+.ui-select__list {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  max-height: min(280px, 45svh);
+  margin: 0;
+  padding: 6px;
+  overflow: auto;
+  list-style: none;
+  background: #fffdf8;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  box-shadow: 0 18px 40px -14px #321b2459, 0 2px 6px #321b2414;
+  animation: ui-pop .16s ease-out;
+}
+@keyframes ui-pop { from { opacity: 0; transform: translateY(-4px); } }
+.ui-select__option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  line-height: 1.3;
+}
+.ui-select__option.is-active { background: var(--paper); }
+.ui-select__option[aria-selected="true"] { color: var(--wine); font-weight: 500; }
+.ui-select__option[aria-disabled="true"] { opacity: .45; cursor: default; }
+.ui-select__text { flex: 1; min-width: 0; }
+.ui-select__meta { flex: none; color: var(--copper); font-size: 14px; font-variant-numeric: tabular-nums; }
+.ui-select__check { flex: none; width: 16px; visibility: hidden; color: var(--wine); }
+.ui-select__option[aria-selected="true"] .ui-select__check { visibility: visible; }
+.ui-field input[type="date"] { font-family: inherit; }
+.ui-field input[type="date"]::-webkit-calendar-picker-indicator { cursor: pointer; opacity: .7; }
+@media (prefers-reduced-motion: reduce) { .ui-select__list { animation: none; } }
