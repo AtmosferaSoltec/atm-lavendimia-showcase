@@ -21,17 +21,27 @@ import { site, whatsappUrl, copy } from "../data/site";
       </dl>
       <p id="dialog-price" aria-live="polite" hidden></p>
       <p id="dialog-note">{copy.ui.consultaElPrecioYLaDisponibilidad}</p>
+      <div class="qty-row">
+        <span id="qty-label">Cantidad</span>
+        <div class="qty" role="group" aria-labelledby="qty-label">
+          <button type="button" id="qty-minus" aria-label="Quitar una unidad">−</button>
+          <output id="qty-value" aria-live="polite">1</output>
+          <button type="button" id="qty-plus" aria-label="Añadir una unidad">+</button>
+        </div>
+      </div>
+      <button type="button" id="dialog-add" class="button">
+        {copy.ui.anadirAlPedido}
+        <span class="arrow" aria-hidden="true">+</span>
+      </button>
       <a
         id="dialog-whatsapp"
-        class="button"
+        class="text-link"
         href={whatsappUrl(site.generalMessage)}
         target="_blank"
         rel="noopener noreferrer"
       >
-        {copy.ui.consultarEsteProducto}
-        <span class="arrow" aria-hidden="true">
-          ↗
-        </span>
+        {copy.ui.consultarSoloEste}
+        <span class="arrow" aria-hidden="true">↗</span>
       </a>
       <p id="presentation-help" class="presentation-help">{copy.ui.quantityHelp}</p>
       <p class="shipping">{site.shipping}</p>

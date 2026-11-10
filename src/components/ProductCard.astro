@@ -1,6 +1,5 @@
 ---
 import Photo from "./Photo.astro";
-import { demoProductImage } from "../data/imagery";
 import {
   categories,
   site,
@@ -9,16 +8,18 @@ import {
   whatsappUrl,
   productMessage,
   copy,
+  formatPrice,
 } from "../data/site";
 const { product } = Astro.props;
 const p = product.data;
 const variants = [...p.variants].sort(
   (a, b) => capacityValue(a.capacity) - capacityValue(b.capacity),
 );
-const src = p.image ?? demoProductImage(p.category, p.order);
-const reference = !p.image
-  ? copy.ui.demoImageNote
-  : p.imageIsReference
+const prices = site.showPrices
+  ? variants.flatMap((v) => (v.price === undefined ? [] : [v.price]))
+  : [];
+const src = p.image;
+const reference = p.imageIsReference
     ? "Recreación de estudio del producto"
     : "";
 ---
@@ -26,6 +27,7 @@ const reference = !p.image
 <article
   class="product-card reveal"
   data-product
+  data-id={p.id}
   data-category={p.category}
   data-name={p.name}
   data-variants={JSON.stringify(variants.map(({ price, ...variant }) => site.showPrices ? { ...variant, price } : variant))}
@@ -51,6 +53,12 @@ const reference = !p.image
       </span>
     </div>
     <h3>{productTitle(p.name)}</h3>
+    {prices.length > 0 && (
+      <p class="product-price">
+        {prices.length > 1 && Math.min(...prices) !== Math.max(...prices) ? "Desde " : ""}
+        {formatPrice(Math.min(...prices))}
+      </p>
+    )}
     <div class="product-bottom">
       <span>
         {[...new Set(variants.map((v) => v.capacity ?? "Por confirmar"))]

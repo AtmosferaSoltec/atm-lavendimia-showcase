@@ -2,11 +2,22 @@ export const site = {
   name: "La Vendimia",
   tagline: "El gusto de compartir",
   url: "https://example.com", // TODO(cliente): dominio real
-  showPrices: false, // Catálogo de consulta: cotización por WhatsApp.
+  showPrices: true, // Precios fijos: se muestran si la presentación tiene `price` en catalog.json.
   indexable: false, // TODO(cliente): activar al aprobar la publicación
   whatsapp: "51936416623",
   phoneDisplay: "+51 936 416 623",
-  address: ["Dirección de ejemplo 123", "Ica, Perú"], // TODO(cliente)
+  address: ["Dirección de ejemplo 123", "Ica, Perú"], 
+  legalName: "La Vendimia S.A.",
+  ruc: "10744555189",
+  email: "info@lavendimia.com", 
+  hours: "Lun a Sáb · 9:00 a 19:00", 
+  mapsUrl: "https://maps.google.com/?q=Ica, Perú", // 
+  social: {
+    instagram: "https://www.instagram.com/lavendimia/",
+    facebook: "https://www.facebook.com/lavendimia", 
+    tiktok: "https://www.tiktok.com/@lavendimia", 
+  },
+  credit: { name: "Atmosfera", url: "https://atmosferast.com" },
   logo: "../assets/brand/lavendimia-imagotipo.svg",
   logoHeader: "../assets/brand/lavendimia-logotipo.svg",
   logoSymbol: "../assets/brand/lavendimia-isotipo.svg",
@@ -47,7 +58,6 @@ export const categories = {
 export const copy = {
   ui: {
     referenceImage: "Imagen referencial",
-    demoImageNote: "Imagen referencial para la demo; la etiqueta y el envase pueden variar.",
     seccion01NuestraColeccion: "01 / NUESTRA COLECCIÓN",
     comoTeGusta: "¿Cómo te gusta ",
     brindar: "brindar?",
@@ -72,6 +82,17 @@ export const copy = {
     navegacionDelPie: "Navegación del pie",
     volverAlInicio: "Volver al inicio",
     eligeTuPresentacion: "Elige tu presentación",
+    anadirAlPedido: "Añadir al pedido",
+    consultarSoloEste: "Consultar solo este producto",
+    miPedido: "Mi pedido",
+    verMiPedido: "Ver mi pedido",
+    cerrarPedido: "Cerrar pedido",
+    pedidoVacio: "Tu pedido está vacío. Elige tus favoritos del catálogo.",
+    vaciarPedido: "Vaciar pedido",
+    seguirViendo: "Seguir viendo el catálogo",
+    enviarPedido: "Enviar pedido por WhatsApp",
+    totalEstimado: "Total estimado",
+    pedidoNota: "Confirmaremos disponibilidad y envío por WhatsApp. Aún no se realiza ningún cobro.",
     consultaElPrecioYLaDisponibilidad:
       "Consulta el precio y la disponibilidad por WhatsApp.",
     consultarEsteProducto: "Consultar esta presentación",
@@ -177,6 +198,31 @@ export const presentationDetails = (variant: Variant) => {
 };
 export const productMessage = (name: string, variant: Variant) =>
   `¡Hola, ${site.name}! Me interesa ${name}, presentación ${presentationDetails(variant).label}. ¿Me comparten ${site.showPrices && variant.price !== undefined ? "la disponibilidad" : "el precio y la disponibilidad"}?`;
+export const formatPrice = (amount: number) => `S/ ${amount.toFixed(2)}`;
+export type OrderLine = { name: string; variant: Variant; qty: number };
+/** Total del pedido; null si alguna línea no tiene precio (no se inventa un total parcial). */
+export const orderTotal = (lines: OrderLine[]) =>
+  site.showPrices && lines.length > 0 && lines.every((l) => l.variant.price !== undefined)
+    ? lines.reduce((sum, l) => sum + l.variant.price! * l.qty, 0)
+    : null;
+export const orderMessage = (lines: OrderLine[]) => {
+  const rows = lines.map(({ name, variant, qty }) => {
+    const price =
+      site.showPrices && variant.price !== undefined
+        ? ` — ${formatPrice(variant.price * qty)}`
+        : "";
+    return `• ${qty} × ${name} (${presentationDetails(variant).label})${price}`;
+  });
+  const total = orderTotal(lines);
+  return [
+    `¡Hola, ${site.name}! Me gustaría hacer este pedido:`,
+    "",
+    ...rows,
+    ...(total !== null ? ["", `Total estimado: ${formatPrice(total)}`] : []),
+    "",
+    `¿Me confirman la disponibilidad${total !== null ? "" : ", el precio"} y el envío?`,
+  ].join("\n");
+};
 export const capacityValue = (capacity: string | null) => {
   const number = Number(capacity?.match(/[\d.,]+/)?.[0].replace(",", ".") ?? 0);
   return number * (/lt|litro|\bl\b/i.test(capacity ?? "") ? 1000 : 1);

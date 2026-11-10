@@ -1,0 +1,30 @@
+---
+import { copy } from "../data/site";
+---
+
+<dialog id="cart-dialog" aria-labelledby="cart-title">
+  <div class="cart-head">
+    <h2 id="cart-title">{copy.ui.miPedido}</h2>
+    <button type="button" class="cart-close" aria-label={copy.ui.cerrarPedido}>×</button>
+  </div>
+  <p id="cart-empty">{copy.ui.pedidoVacio}</p>
+  <ul id="cart-lines" class="cart-lines"></ul>
+  <div class="cart-foot" id="cart-foot">
+    <p class="cart-total" id="cart-total" hidden>
+      <span>{copy.ui.totalEstimado}</span><strong></strong>
+    </p>
+    <a id="cart-send" class="button" target="_blank" rel="noopener noreferrer" href="#">
+      {copy.ui.enviarPedido}
+      <span class="arrow" aria-hidden="true">↗</span>
+    </a>
+    <p class="cart-note">{copy.ui.pedidoNota}</p>
+    <button type="button" class="cart-clear" id="cart-clear">{copy.ui.vaciarPedido}</button>
+  </div>
+</dialog>
+<div class="cart-toast" id="cart-toast" role="status" hidden>
+  <span></span>
+  <button type="button">{copy.ui.verMiPedido}</button>
+</div>
+<script>
+  import "../scripts/cart";
+</script>

@@ -9,3 +9,5 @@ docs
 *.md
 .env
 .env.*
+.DS_Store
+src/assets/originales

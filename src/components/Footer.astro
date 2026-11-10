@@ -2,6 +2,24 @@
 import Brand from "./Brand.astro";
 import WhatsAppLink from "./WhatsAppLink.astro";
 import { site, copy } from "../data/site";
+const icons = {
+  Instagram:
+    '<rect x="3.5" y="3.5" width="17" height="17" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.2" cy="6.8" r=".6" fill="currentColor" />',
+  Facebook:
+    '<path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5.5v4H8v7h4v-7h3l.8-4H12V7.5c0-.3.2-.5.5-.5H15V3Z" />',
+  TikTok:
+    '<path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5" /><path d="M14 3c.3 2.6 2 4.4 5 4.6" />',
+} as const;
+const socials = (
+  [
+    ["Instagram", site.social.instagram],
+    ["Facebook", site.social.facebook],
+    ["TikTok", site.social.tiktok],
+  ] as const
+).filter(([, href]) => href);
+const legal = [site.legalName || site.name, site.ruc && `RUC ${site.ruc}`]
+  .filter(Boolean)
+  .join(" · ");
 ---
 
 <footer>
@@ -31,6 +49,24 @@ import { site, copy } from "../data/site";
             </span>
           ))}
         </address>
+        {site.mapsUrl && (
+          <a class="text-link" href={site.mapsUrl} target="_blank" rel="noopener noreferrer">
+            Cómo llegar ↗
+          </a>
+        )}
+        {site.hours && <p>{site.hours}</p>}
+        {site.email && <a class="text-link" href={`mailto:${site.email}`}>{site.email}</a>}
+        {socials.length > 0 && (
+          <ul class="footer-social" aria-label="Redes sociales">
+            {socials.map(([label, href]) => (
+              <li>
+                <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
+                  <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" set:html={icons[label]} />
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
       <a href="#inicio" class="back-top" aria-label={copy.ui.volverAlInicio}>
         ↑
@@ -38,9 +74,13 @@ import { site, copy } from "../data/site";
     </div>
     <div class="footer-bottom">
       <p>
-        © {new Date().getFullYear()} {site.name}. Hecho para compartir.
+        © {new Date().getFullYear()} {legal}. Hecho para compartir.
       </p>
       <p>{site.ageNotice}</p>
     </div>
+    <p class="footer-credit">
+      Developed by
+      <a href={site.credit.url} target="_blank" rel="noopener">{site.credit.name}</a>
+    </p>
   </div>
 </footer>

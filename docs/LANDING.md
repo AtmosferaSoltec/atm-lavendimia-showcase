@@ -212,7 +212,7 @@ export const site = {
   address: ['Dirección de ejemplo 123', 'Ica, Perú'], // TODO(cliente)
   shipping: 'Envíos a todo el Perú',
   ageNotice: 'Solo para mayores de 18 años. Disfruta con responsabilidad.',
-  logo: '../assets/brand/logo-placeholder.svg', // TODO(cliente): logo real en SVG
+  logo: '../assets/brand/lavendimia-imagotipo.svg',
 };
 ```
 
@@ -292,7 +292,7 @@ atm-lavendimia-showcase/
 │   └── robots.txt               ← (o generado según site.indexable)
 ├── src/
 │   ├── assets/
-│   │   ├── brand/logo-placeholder.svg
+│   │   ├── brand/               ← logotipo, imagotipo e isotipo (SVG)
 │   │   ├── editorial/           ← hero, pisco, crema, macerado (referenciales)
 │   │   └── products/            ← fotos de producto
 │   ├── components/              ← Header, Hero, Collections, Catalog, ProductCard,
@@ -389,3 +389,9 @@ Resultados y alcance detallado de pruebas: [`VALIDATION.md`](VALIDATION.md).
 - Tarjetas de categoría fotográficas sin forma de estandarte, zoom suave con ratón y foco, flechas animadas, filtros más visibles y fotografías en AVIF/WebP. Se conserva la preferencia de movimiento reducido y no se añaden dependencias.
 - Validación: build correcto; Chromium a 360, 768 y 1440 px, WebKit móvil emulado, filtros, búsqueda sin tildes, estado vacío, paginación, 52 diálogos con imagen, 174 presentaciones con mensaje de WhatsApp correcto y catálogo sin JavaScript. No se ha desplegado ni hecho commit.
 - Lighthouse móvil sobre `pnpm preview`: rendimiento 99, accesibilidad 100, buenas prácticas 100, SEO 69 por bloqueo intencional de indexación; CLS 0 y LCP 2,2 s (ligeramente sobre la meta de 2 s). Auditoría local, no una medición en dispositivos físicos ni del hosting. Las fotos editoriales se comprobaron cargadas y las animaciones se revisaron también sin movimiento reducido.
+
+### 2026-11-06 · Fotografías reales de los 15 macerados
+
+- Se incorporaron a `src/assets/products/` los 15 PNG transparentes de 1400 × 2100 px aprobados en la conversación y preparados mediante edición convencional. `catalog.json` los vincula a sus productos existentes, con `imageIsReference: false`; Pasas corresponde a Pasa Morena y Pasas Rubias a Pasa Rubia. Se conservan nombres, presentaciones y el producto genérico Macerado.
+- Las tarjetas y los diálogos usan estas fotografías mediante el componente de imágenes existente, que genera AVIF/WebP. No se retocaron nuevamente las fotos ni se regeneraron etiquetas.
+- Validación: `pnpm build` correcto; Chromium a 360 y 1440 px, carga de las 15 tarjetas y sus 15 diálogos, sin avisos de imagen referencial, errores JavaScript ni desbordamiento horizontal. Disponible en el servidor local existente; sin despliegue.

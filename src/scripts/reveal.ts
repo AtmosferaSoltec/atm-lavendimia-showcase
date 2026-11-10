@@ -10,9 +10,11 @@ const observer = new IntersectionObserver(
     for (const entry of entries) {
       if (entry.target === hero)
         pastHero = !entry.isIntersecting && entry.boundingClientRect.bottom < 0;
-      else if (entry.target === contact)
+      else if (entry.target === contact) {
         nearContact = entry.isIntersecting || entry.boundingClientRect.top < 0;
-      else if (entry.isIntersecting) {
+        // Contacto también es .reveal: sin esto se queda invisible y deja un hueco.
+        if (nearContact) contact.classList.add("is-visible");
+      } else if (entry.isIntersecting) {
         entry.target.classList.add("is-visible");
         observer.unobserve(entry.target);
       }

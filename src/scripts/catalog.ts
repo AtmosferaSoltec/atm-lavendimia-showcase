@@ -3,10 +3,12 @@ import {
   site,
   copy,
   presentationDetails,
+  formatPrice,
   productMessage,
   whatsappUrl,
   type Variant,
 } from "../data/site";
+import { addToCart } from "./cart";
 const cards = [...document.querySelectorAll<HTMLElement>("[data-product]")];
 const search = document.querySelector<HTMLInputElement>("#search")!;
 const chips = [
@@ -91,7 +93,7 @@ function updateVariant() {
   const hasPrice = site.showPrices && variant.price !== undefined;
   const price = document.querySelector<HTMLElement>("#dialog-price")!;
   price.hidden = !hasPrice;
-  price.textContent = hasPrice ? `S/ ${variant.price!.toFixed(2)} por ${details.presentation.toLowerCase()}` : "";
+  price.textContent = hasPrice ? `${formatPrice(variant.price!)} por ${details.presentation.toLowerCase()}` : "";
   document.querySelector("#dialog-note")!.textContent =
     !hasPrice
       ? copy.ui.consultaElPrecioYLaDisponibilidad
@@ -99,10 +101,22 @@ function updateVariant() {
   whatsapp.href = whatsappUrl(productMessage(active.dataset.name!, variant));
   whatsapp.setAttribute(
     "aria-label",
-    `${copy.ui.consultarEsteProducto}: ${active.dataset.name}, ${details.label}, por WhatsApp`,
+    `${copy.ui.consultarSoloEste}: ${active.dataset.name}, ${details.label}, por WhatsApp`,
   );
 }
 select.addEventListener("change", updateVariant);
+let qty = 1;
+const qtyValue = document.querySelector<HTMLOutputElement>("#qty-value")!;
+const setQty = (n: number) => {
+  qty = Math.min(99, Math.max(1, n));
+  qtyValue.textContent = String(qty);
+};
+document.querySelector("#qty-minus")!.addEventListener("click", () => setQty(qty - 1));
+document.querySelector("#qty-plus")!.addEventListener("click", () => setQty(qty + 1));
+document.querySelector("#dialog-add")!.addEventListener("click", () => {
+  addToCart(active.dataset.id!, variants[Number(select.value)], qty);
+  dialog.close();
+});
 cards.forEach((card) =>
   card.querySelector("a")!.addEventListener("click", (e) => {
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
@@ -130,6 +144,7 @@ cards.forEach((card) =>
           ),
       ),
     );
+    setQty(1);
     updateVariant();
     dialog.showModal();
     document.documentElement.classList.add("dialog-open");
