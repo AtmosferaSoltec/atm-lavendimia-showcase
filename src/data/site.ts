@@ -4,18 +4,18 @@ export const site = {
   url: "https://example.com", // TODO(cliente): dominio real
   showPrices: true, // Precios fijos: se muestran si la presentación tiene `price` en catalog.json.
   indexable: false, // TODO(cliente): activar al aprobar la publicación
-  whatsapp: "51936416623",
-  phoneDisplay: "+51 936 416 623",
-  address: ["Dirección de ejemplo 123", "Ica, Perú"], 
-  legalName: "La Vendimia S.A.",
-  ruc: "10744555189",
-  email: "info@lavendimia.com", 
-  hours: "Lun a Sáb · 9:00 a 19:00", 
-  mapsUrl: "https://maps.google.com/?q=Ica, Perú", // 
+  whatsapp: "51953400568",
+  phoneDisplay: "+51 953 400 568",
+  address: ["CAR. CARRETERA PANAMERICANA SUR 188", "Chincha, Ica, Perú"],
+  legalName: "TASAYCO HERNANDEZ JESUS",
+  ruc: "10471983751",
+  email: "info@lavendimia.com",
+  hours: "Lun a Sáb · 9:00 a 19:00",
+  mapsUrl: "https://maps.google.com/?q=Ica, Perú", //
   social: {
     instagram: "https://www.instagram.com/lavendimia/",
-    facebook: "https://www.facebook.com/lavendimia", 
-    tiktok: "https://www.tiktok.com/@lavendimia", 
+    facebook: "https://www.facebook.com/lavendimia",
+    tiktok: "https://www.tiktok.com/@lavendimia",
   },
   credit: { name: "Atmosfera", url: "https://atmosferast.com" },
   logo: "../assets/brand/lavendimia-imagotipo.svg",
@@ -92,7 +92,8 @@ export const copy = {
     seguirViendo: "Seguir viendo el catálogo",
     enviarPedido: "Enviar pedido por WhatsApp",
     totalEstimado: "Total estimado",
-    pedidoNota: "Confirmaremos disponibilidad y envío por WhatsApp. Aún no se realiza ningún cobro.",
+    pedidoNota:
+      "Confirmaremos disponibilidad y envío por WhatsApp. Aún no se realiza ningún cobro.",
     consultaElPrecioYLaDisponibilidad:
       "Consulta el precio y la disponibilidad por WhatsApp.",
     consultarEsteProducto: "Consultar esta presentación",
@@ -202,7 +203,9 @@ export const formatPrice = (amount: number) => `S/ ${amount.toFixed(2)}`;
 export type OrderLine = { name: string; variant: Variant; qty: number };
 /** Total del pedido; null si alguna línea no tiene precio (no se inventa un total parcial). */
 export const orderTotal = (lines: OrderLine[]) =>
-  site.showPrices && lines.length > 0 && lines.every((l) => l.variant.price !== undefined)
+  site.showPrices &&
+  lines.length > 0 &&
+  lines.every((l) => l.variant.price !== undefined)
     ? lines.reduce((sum, l) => sum + l.variant.price! * l.qty, 0)
     : null;
 export const orderMessage = (lines: OrderLine[]) => {
