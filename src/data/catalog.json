@@ -1,11 +1,206 @@
 {
   "source": {
-    "presentationCount": 63,
-    "productCount": 15,
+    "presentationCount": 78,
+    "productCount": 30,
     "publicCategoryCount": 5,
-    "note": "Catálogo de La Vendimia. Por ahora solo los macerados con fotografía real; las demás categorías se agregarán cuando haya fotos."
+    "note": "Catálogo de La Vendimia. Vinos y macerados con fotografía de producto; las demás categorías se agregarán cuando haya fotos. Las presentaciones de los vinos están por confirmar y no llevan precio."
   },
   "products": [
+    {
+      "id": "vino-siete-amores",
+      "name": "Vino Siete Amores",
+      "category": "vinos",
+      "image": "vino-siete-amores.png",
+      "imageIsReference": false,
+      "variants": [
+        {
+          "capacity": null,
+          "presentation": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "vino-perfecto-amor",
+      "name": "Vino Perfecto Amor",
+      "category": "vinos",
+      "image": "vino-perfecto-amor.png",
+      "imageIsReference": false,
+      "variants": [
+        {
+          "capacity": null,
+          "presentation": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "vino-puro-amor",
+      "name": "Vino Puro Amor",
+      "category": "vinos",
+      "image": "vino-puro-amor.png",
+      "imageIsReference": false,
+      "variants": [
+        {
+          "capacity": null,
+          "presentation": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "vino-maracuya",
+      "name": "Vino Maracuyá",
+      "category": "vinos",
+      "image": "vino-maracuya.png",
+      "imageIsReference": false,
+      "variants": [
+        {
+          "capacity": null,
+          "presentation": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "vino-borgona",
+      "name": "Vino Borgoña",
+      "category": "vinos",
+      "image": "vino-borgona.png",
+      "imageIsReference": false,
+      "variants": [
+        {
+          "capacity": null,
+          "presentation": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "vino-borgona-blanca",
+      "name": "Vino Borgoña Blanca",
+      "category": "vinos",
+      "image": "vino-borgona-blanca.png",
+      "imageIsReference": false,
+      "variants": [
+        {
+          "capacity": null,
+          "presentation": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "vino-gran-rose",
+      "name": "Vino Gran Rosé",
+      "category": "vinos",
+      "image": "vino-gran-rose.png",
+      "imageIsReference": false,
+      "variants": [
+        {
+          "capacity": null,
+          "presentation": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "vino-moscato",
+      "name": "Vino Moscato",
+      "category": "vinos",
+      "image": "vino-moscato.png",
+      "imageIsReference": false,
+      "variants": [
+        {
+          "capacity": null,
+          "presentation": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "vino-lagrima-de-mujer",
+      "name": "Vino Lágrima de Mujer",
+      "category": "vinos",
+      "image": "vino-lagrima-de-mujer.png",
+      "imageIsReference": false,
+      "variants": [
+        {
+          "capacity": null,
+          "presentation": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "vino-higo",
+      "name": "Vino Higo",
+      "category": "vinos",
+      "image": "vino-higo.png",
+      "imageIsReference": false,
+      "variants": [
+        {
+          "capacity": null,
+          "presentation": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "vino-pina",
+      "name": "Vino Piña",
+      "category": "vinos",
+      "image": "vino-pina.png",
+      "imageIsReference": false,
+      "variants": [
+        {
+          "capacity": null,
+          "presentation": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "vino-sangre-de-toro",
+      "name": "Vino Sangre de Toro",
+      "category": "vinos",
+      "image": "vino-sangre-de-toro.png",
+      "imageIsReference": false,
+      "variants": [
+        {
+          "capacity": null,
+          "presentation": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "vino-durazno",
+      "name": "Vino Durazno",
+      "category": "vinos",
+      "image": "vino-durazno.png",
+      "imageIsReference": false,
+      "variants": [
+        {
+          "capacity": null,
+          "presentation": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "vino-mistela",
+      "name": "Vino Mistela",
+      "category": "vinos",
+      "image": "vino-mistela.png",
+      "imageIsReference": false,
+      "variants": [
+        {
+          "capacity": null,
+          "presentation": "Por confirmar"
+        }
+      ]
+    },
+    {
+      "id": "vino-sangria",
+      "name": "Vino Sangría",
+      "category": "vinos",
+      "image": "vino-sangria.png",
+      "imageIsReference": false,
+      "variants": [
+        {
+          "capacity": null,
+          "presentation": "Por confirmar"
+        }
+      ]
+    },
     {
       "id": "macerado-de-maracuya",
       "name": "Macerado de Maracuyá",
